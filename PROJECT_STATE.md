@@ -12,7 +12,7 @@
 | Section ID | Name | Initial State | Issue Identified | Action / Fix Applied | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **01** | **Top Navbar & Header** | Overlapping text | Submenus rendered inline due to missing CSS for `.navbar__submenu` | Added proper absolute positioning, glassmorphism card, hover transitions, and clean dividers | ✅ **Fixed & Verified** |
-| **02** | **Full-screen 5-Col Side Menu** | 4K retina panels | None reported | Verified 5 column layouts, focus trap, and HD assets | 🔍 Pending Review |
+| **02** | **Full-screen 5-Col Side Menu** | Blurry images & abrupt exit | Low-res image params (`w=500, q=70`) and missing exit reverse delays | Upgraded all 5 columns to 4K Retina HD (`w=1400-1600, q=90`) and added reverse cascade exit animation | ✅ **Fixed & Verified** |
 | **03** | **Hero Banner** | Ken Burns & guide CTAs | None reported | Verified typography, button interactions, and scroll indicator | 🔍 Pending Review |
 | **04** | **About Section** | 2-col with watermark | Extraneous controls previously removed | Verified watermark, typography, and gold frame | 🔍 Pending Review |
 | **05** | **Our Services** | Portrait frame & 3 items | None reported | Verified left photo, gold eyebrow, heading, and 3 hover items | 🔍 Pending Review |
@@ -29,9 +29,10 @@
 - **Commit `13e4b21`:** Initial commit & baseline setup.
 - **Commit `59cce8e`:** Added missing CSS for `.navbar__dropdown`, `.navbar__submenu`, `.navbar__submenu-link`, and `.navbar__submenu-divider`. Eliminated header text overlapping.
 - **Commit `f84af8c`:** Added `white-space: nowrap` and dynamic `width: max-content` on `.navbar__submenu` to prevent multi-line breaks.
-- **Section 01 Follow-up:** Configured top navbar to transparent gradient overlay over hero estate image, transitioning to frosted dark glassmorphism on scroll.
+- **Commit `5a07b16`:** Configured top navbar to transparent gradient overlay over hero estate image, transitioning to frosted dark glassmorphism on scroll.
+- **Section 02 Fix:** Upgraded 5 side-menu background images to 4K Ultra HD and implemented reverse cascade smooth exit animation (Columns 5 ➔ 1).
 
 ---
 
 ## 🎯 Next Recommended Step
-Proceed to review **Section 02: Full-screen 5-Col Side Menu** or **Section 03: Hero Banner** upon user instruction.
+Proceed to review **Section 03: Hero Banner** or **Section 04: About** upon user instruction.
