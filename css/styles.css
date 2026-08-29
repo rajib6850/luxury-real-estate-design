@@ -714,7 +714,7 @@ p {
 .side-menu.active .side-menu__box[data-delay="4"] { transition-delay: 0.24s; }
 .side-menu.active .side-menu__box[data-delay="5"] { transition-delay: 0.32s; }
 
-/* Box background image with silky gentle motion */
+/* Box background image with silky grayscale hover & gentle 3% zoom */
 .side-menu__box-bg {
   position: absolute;
   inset: 0;
@@ -727,15 +727,17 @@ p {
   height: 100%;
   object-fit: cover;
   transform: scale(1.0);
-  filter: brightness(0.92);
-  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
-              filter 0.6s ease;
+  filter: grayscale(0%) brightness(0.92);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.9s ease;
   will-change: transform, filter;
 }
 
 .side-menu__box:hover .side-menu__box-bg img {
-  transform: scale(1.05);
-  filter: brightness(1.05);
+  transform: scale(1.03);
+  filter: grayscale(100%) brightness(0.85) contrast(1.08);
+  transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1.0s ease;
 }
 
 /* Box dark overlay with smooth transitions */

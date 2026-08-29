@@ -32,7 +32,8 @@
 - **Commit `5a07b16`:** Configured top navbar to transparent gradient overlay over hero estate image, transitioning to frosted dark glassmorphism on scroll.
 - **Commit `e5b1762`:** Upgraded 5 side-menu background images to 4K Ultra HD and implemented reverse cascade smooth exit animation.
 - **Commit `c71192b`:** Tuned exit duration to 0.85s with 0.09s step delays for a slower, cinematic feel.
-- **Section 02 Hover Polish:** Unified image hover transition curve (0.8s `cubic-bezier(0.25, 1, 0.5, 1)`) and gentle 5% zoom to eliminate jerky sudden zoom accelerations.
+- **Commit `a7bd7fb`:** Unified image hover transition curve.
+- **Section 02 Polish:** Configured silky smooth 100% grayscale filter transition and gentle 3% luxury micro-zoom on side-menu box hover.
 
 ---
 
