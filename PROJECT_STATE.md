@@ -28,7 +28,8 @@
 
 - **Commit `13e4b21`:** Initial commit & baseline setup.
 - **Commit `59cce8e`:** Added missing CSS for `.navbar__dropdown`, `.navbar__submenu`, `.navbar__submenu-link`, and `.navbar__submenu-divider`. Eliminated header text overlapping.
-- **Section 01 Follow-up:** Added `white-space: nowrap` and dynamic `width: max-content` on `.navbar__submenu` to prevent multi-line breaks for items like `MORTGAGE CALCULATOR`.
+- **Commit `f84af8c`:** Added `white-space: nowrap` and dynamic `width: max-content` on `.navbar__submenu` to prevent multi-line breaks.
+- **Section 01 Follow-up:** Configured top navbar to transparent gradient overlay over hero estate image, transitioning to frosted dark glassmorphism on scroll.
 
 ---
 
