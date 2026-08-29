@@ -1,0 +1,10 @@
+# Large Figma/Design mockup exports (>100MB exceeds GitHub push limit)
+Frame 1 without text in link hints.jpg
+Frame 2 with text in link hints.jpg
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
