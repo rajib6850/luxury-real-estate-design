@@ -601,7 +601,7 @@ p {
   pointer-events: none;
   background: var(--color-dark);
   opacity: 0;
-  transition: opacity 0.4s ease 0.28s, visibility 0.4s ease 0.28s;
+  transition: opacity 0.5s ease 0.6s, visibility 0.5s ease 0.6s;
 }
 
 .side-menu.active {
@@ -633,7 +633,7 @@ p {
 .side-menu.active .side-menu__close {
   opacity: 0.85;
   transform: translateY(0);
-  transition: opacity 0.5s ease 0.4s, transform 0.5s var(--ease-out-expo) 0.4s, color 0.3s ease;
+  transition: opacity 0.6s ease 0.4s, transform 0.6s var(--ease-out-expo) 0.4s, color 0.3s ease;
 }
 
 .side-menu__close:hover {
@@ -668,7 +668,7 @@ p {
 
 .side-menu.active .side-menu__url {
   opacity: 1;
-  transition: opacity 0.5s ease 0.5s;
+  transition: opacity 0.6s ease 0.5s;
 }
 
 /* ── Columns container — 5 columns side by side ─────────── */
@@ -683,12 +683,12 @@ p {
   position: relative;
   flex: 1;
   overflow: hidden;
-  /* Default state & smooth reverse exit animation */
+  /* Smooth, slow, and luxurious reverse exit glide */
   transform: translateY(-100%);
   opacity: 0;
   transition:
-    transform 0.55s cubic-bezier(0.25, 1, 0.5, 1),
-    opacity 0.45s ease;
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.75s ease;
 }
 
 .side-menu__box--wide {
@@ -697,10 +697,10 @@ p {
 
 /* Reverse staggered delays on EXIT (Box 5 closes first, Box 1 closes last) */
 .side-menu__box[data-delay="5"] { transition-delay: 0s; }
-.side-menu__box[data-delay="4"] { transition-delay: 0.05s; }
-.side-menu__box[data-delay="3"] { transition-delay: 0.10s; }
-.side-menu__box[data-delay="2"] { transition-delay: 0.15s; }
-.side-menu__box[data-delay="1"] { transition-delay: 0.20s; }
+.side-menu__box[data-delay="4"] { transition-delay: 0.09s; }
+.side-menu__box[data-delay="3"] { transition-delay: 0.18s; }
+.side-menu__box[data-delay="2"] { transition-delay: 0.27s; }
+.side-menu__box[data-delay="1"] { transition-delay: 0.36s; }
 
 /* Staggered entrance delays on OPEN (Box 1 enters first, Box 5 enters last) */
 .side-menu.active .side-menu__box {
@@ -714,44 +714,57 @@ p {
 .side-menu.active .side-menu__box[data-delay="4"] { transition-delay: 0.24s; }
 .side-menu.active .side-menu__box[data-delay="5"] { transition-delay: 0.32s; }
 
-/* Box background image */
+/* Box background image with silky Ken Burns motion */
 .side-menu__box-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
 .side-menu__box-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 8s ease-out;
+  transform: scale(1.12);
+  filter: brightness(0.9);
+  transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1.8s ease;
+  will-change: transform, filter;
+}
+
+.side-menu.active .side-menu__box-bg img {
+  transform: scale(1.0);
+  filter: brightness(1);
 }
 
 .side-menu__box:hover .side-menu__box-bg img {
-  transform: scale(1.06);
+  transform: scale(1.08);
+  filter: brightness(1.06);
+  transition: transform 3.5s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 1.2s ease;
 }
 
-/* Box dark overlay */
+/* Box dark overlay with smooth transitions */
 .side-menu__box-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(15, 15, 20, 0.55) 0%,
+    rgba(15, 15, 20, 0.6) 0%,
     rgba(15, 15, 20, 0.45) 40%,
-    rgba(15, 15, 20, 0.65) 100%
+    rgba(15, 15, 20, 0.7) 100%
   );
-  transition: background 0.5s ease;
+  transition: background 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .side-menu__box:hover .side-menu__box-overlay {
   background: linear-gradient(
     180deg,
-    rgba(15, 15, 20, 0.4) 0%,
-    rgba(15, 15, 20, 0.35) 40%,
-    rgba(15, 15, 20, 0.55) 100%
+    rgba(15, 15, 20, 0.38) 0%,
+    rgba(15, 15, 20, 0.3) 40%,
+    rgba(15, 15, 20, 0.5) 100%
   );
 }
 

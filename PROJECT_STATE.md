@@ -30,7 +30,8 @@
 - **Commit `59cce8e`:** Added missing CSS for `.navbar__dropdown`, `.navbar__submenu`, `.navbar__submenu-link`, and `.navbar__submenu-divider`. Eliminated header text overlapping.
 - **Commit `f84af8c`:** Added `white-space: nowrap` and dynamic `width: max-content` on `.navbar__submenu` to prevent multi-line breaks.
 - **Commit `5a07b16`:** Configured top navbar to transparent gradient overlay over hero estate image, transitioning to frosted dark glassmorphism on scroll.
-- **Section 02 Fix:** Upgraded 5 side-menu background images to 4K Ultra HD and implemented reverse cascade smooth exit animation (Columns 5 ➔ 1).
+- **Commit `e5b1762`:** Upgraded 5 side-menu background images to 4K Ultra HD and implemented reverse cascade smooth exit animation.
+- **Section 02 Polish:** Tuned exit duration to 0.85s with 0.09s step delays for a slower, cinematic feel and added silky smooth Ken Burns zoom dynamics to all 5 panels.
 
 ---
 
