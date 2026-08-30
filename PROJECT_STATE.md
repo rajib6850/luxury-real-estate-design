@@ -45,7 +45,8 @@
 - **Commit `2b44e51`:** Updated master `--font-serif` design token to `Baskerville-Old` for all titles across the website.
 - **Commit `8d32a02`:** Refined Hero Banner with 2-line Baskerville headline, deepened cinematic gradient overlay, and solid white subtitle.
 - **Commit `6752b1e`:** Activated full super luxury scroll reveal engine and button sheen reflection.
-- **Section 04 About Complete Overhaul:** Sharp 90° corners, zero-flicker fixed padding bounding box, GPU morphing gold-to-grayscale frame on hover, Web Animations API live matrix 3.5s zoom & 1.6s smooth return, and perfectly centered 1.6s breathing scroll entrance for "ABOUT" watermark.
+- **Commit `450e108`:** Completed Section 04 About overhaul with sharp 90° corners, zero-flicker fixed bounding box, morphing grayscale frame, live matrix zoom, and centered watermark entrance.
+- **Super Luxury Scroll Suite:** Added custom obsidian & gold scrollbar, top champagne-gold glowing progress tracker, frosted-glass floating back-to-top concierge capsule, and architectural 60fps parallax depth.
 
 ---
 

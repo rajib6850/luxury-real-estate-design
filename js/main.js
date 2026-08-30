@@ -8,19 +8,68 @@
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── 1. NAVBAR SCROLL BEHAVIOR ─────────────────────────── */
+  /* ── 1. NAVBAR & LUXURY SCROLL SUITE ──────────────────── */
   const navbar = document.getElementById('navbar');
+  const scrollProgress = document.getElementById('scroll-progress');
+  const backToTopBtn = document.getElementById('back-to-top');
+  const heroImage = document.querySelector('.hero__background-image');
 
-  function handleNavbarScroll() {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+  let scrollTicking = false;
+
+  function updateScrollSuite() {
+    const scrollY = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // 1. Navbar frosted state
+    if (navbar) {
+      if (scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     }
+
+    // 2. Top gold progress line
+    if (scrollProgress && docHeight > 0) {
+      const scrollPercent = Math.min(Math.max((scrollY / docHeight) * 100, 0), 100);
+      scrollProgress.style.width = scrollPercent + '%';
+    }
+
+    // 3. Back-to-top concierge button
+    if (backToTopBtn) {
+      if (scrollY > 500) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+
+    // 4. Subtle Hero Parallax
+    if (!prefersReducedMotion && heroImage && scrollY < window.innerHeight) {
+      const heroShift = scrollY * 0.22;
+      heroImage.style.transform = 'scale(1.08) translate3d(0, ' + heroShift + 'px, 0)';
+    }
+
+    scrollTicking = false;
   }
 
-  window.addEventListener('scroll', handleNavbarScroll, { passive: true });
-  handleNavbarScroll(); // Initial check
+  window.addEventListener('scroll', function () {
+    if (!scrollTicking) {
+      requestAnimationFrame(updateScrollSuite);
+      scrollTicking = true;
+    }
+  }, { passive: true });
+
+  updateScrollSuite(); // Initial check
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 
   /* ── 2. SIDE MENU ──────────────────────────────────────── */
   const sideMenu = document.getElementById('side-menu');
