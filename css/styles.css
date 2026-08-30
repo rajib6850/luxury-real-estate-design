@@ -2522,7 +2522,7 @@ p {
 }
 
 .footer__main {
-  padding: var(--space-xl) 3rem var(--space-lg);
+  padding: 3.8rem 3rem 0;
   text-align: center;
 }
 
@@ -2546,19 +2546,18 @@ p {
   margin-bottom: var(--space-lg);
 }
 
-/* Thin gold divider */
 .footer__divider {
   width: 40px;
   height: 1px;
   background: var(--color-secondary);
-  margin: 0 auto var(--space-lg);
+  margin: 0 auto 2.2rem;
 }
 
 .footer__info-grid {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  margin-bottom: var(--space-lg);
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
 }
 
@@ -2594,7 +2593,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 1.2rem;
-  margin-bottom: var(--space-lg);
+  margin-bottom: 0;
 }
 
 .footer__social-link {
@@ -2615,7 +2614,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 2.5rem;
-  padding: 1.5rem 3rem;
+  padding: 1.25rem 2rem;
   border-top: 1px solid var(--color-border-light);
   flex-wrap: wrap;
 }
