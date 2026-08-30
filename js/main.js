@@ -486,6 +486,28 @@
         showSlide(idx);
       });
     });
+
+    // Mobile touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    testimonialSlider.addEventListener('touchstart', function (e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    testimonialSlider.addEventListener('touchend', function (e) {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          // Swiped left -> next slide
+          showSlide(currentSlide + 1);
+        } else {
+          // Swiped right -> prev slide
+          showSlide(currentSlide - 1);
+        }
+      }
+    }, { passive: true });
   }
 
   /* ── 7. SLIDER: FEATURED COMMUNITIES (Continuous Infinite Reel) ── */
