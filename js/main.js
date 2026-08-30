@@ -533,8 +533,9 @@
 
       const getCardStep = function () {
         const card = communitiesTrack.querySelector('.community-card');
-        const gap = 22.4; // 1.4rem gap in px
-        return card ? card.offsetWidth + gap : 302.4;
+        const trackStyle = window.getComputedStyle(communitiesTrack);
+        const gap = parseFloat(trackStyle.gap) || 20;
+        return card ? card.offsetWidth + gap : 260;
       };
 
       const updateDots = function () {

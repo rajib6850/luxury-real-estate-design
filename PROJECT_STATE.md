@@ -18,7 +18,7 @@
 | **05** | **Our Services** | Portrait frame & 3 items | Mobile aspect ratio crop & desktop grid collapse | Overhauled tablet & mobile responsive flow, 16:10 landscape architectural card, frosted touch cards, and fluid typography | ✅ **Fixed & Verified** |
 | **06** | **Featured Listings** | Property cards | Mobile carousel card peek & control bar stacking | Overhauled tablet 2-card view, 84% touch-peek mobile swipe carousel, editorial left header, and stacked touch CTAs | ✅ **Fixed & Verified** |
 | **07** | **Testimonials** | Side-by-side & slider | Giant unconstrained icons & generic image | Replaced with authentic happy client photo, added 14px gold micro-glyphs, activated horizontal track slider, and added mobile touch swipe | ✅ **Fixed & Verified** |
-| **08** | **Featured Communities** | Light beige reel | None reported | Verified 7 authentic cards with vertical text, arrows, and continuous loop | 🔍 Pending Review |
+| **08** | **Featured Communities** | Light beige reel | Missing mobile slider padding override & static card step | Fixed mobile slider selector, added dynamic card stepping in JS, tuned vertical typography, and enabled touch-action: pan-y | ✅ **Fixed & Verified** |
 | **09** | **Call to Action (CTA)** | Infinity pool card | None reported | Verified full-width background and consultation card | 🔍 Pending Review |
 | **10** | **Footer Section** | Brand links & legal | None reported | Verified 2026 copyright and contact columns | 🔍 Pending Review |
 
@@ -53,9 +53,10 @@
 - **Commit `dd48325`:** Section 04 About Responsive Polish (1-column flex stack, 12px frame offsets, fluid typography).
 - **About Mobile Watermark Refinement:** Fine-tuned mobile watermark to a bold and elegant scale (`clamp(4.0rem, 13.5vw, 5.6rem)` / `clamp(3.2rem, 13.5vw, 4.4rem)`), lowered top offset (`2.2rem` / `1.8rem`), with zero side-cropping and centered horizontal lock.
 - **Commit `fc3c0a9`:** Section 06 Properties Responsive Overhaul & Global Centralized Typography Design System.
-- **Section 07 Testimonials Overhaul & Infinite Brand Shimmer:** Replaced left image with authentic happy client couple photo (`images/testimonial-clients.jpg`), removed top decorative icons for a clean minimal luxury layout, added infinite molten champagne gold shimmer gradient on `"Victoria Crestwood Group"`, activated horizontal track sliding slider engine with active slide blur/focus, and added mobile touch swipe navigation.
+- **Commit `2d082bd`:** Section 07 Testimonials Overhaul & Infinite Brand Shimmer.
+- **Section 08 Featured Communities Responsive Overhaul:** Fixed mobile slider padding selector, dynamically computed live card step distance in JS, enabled touch-action: pan-y, and tuned vertical typography coordinates.
 
 ---
 
 ## 🎯 Next Recommended Step
-Proceed to review and polish **Section 08: Featured Communities** upon user instruction.
+Proceed to review and polish **Section 09: Call to Action (CTA)** upon user instruction.

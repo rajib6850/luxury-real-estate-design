@@ -2840,8 +2840,14 @@ p {
     font-size: clamp(5rem, 12vw, 8.5rem);
   }
 
+  .communities__header,
+  .communities__slider {
+    padding: 0 2rem;
+  }
+
   .community-card {
-    flex: 0 0 calc(33.333% - 0.67rem);
+    flex: 0 0 260px;
+    width: 260px;
   }
 
   .services__layout {
@@ -3317,27 +3323,40 @@ p {
 
   /* Communities reel mobile */
   .communities {
-    padding: 4.5rem 0;
+    padding: 4rem 0 4.5rem;
   }
 
-  .communities__header,
-  .communities__carousel-wrapper,
-  .communities__dot-nav {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+  .communities__header {
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+    gap: 1rem;
   }
 
-  .communities__carousel-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
+  .communities__slider {
+    padding: 0 1.25rem;
+    touch-action: pan-y;
+    overflow-x: hidden;
+  }
+
+  .communities__track {
+    gap: 1.15rem;
   }
 
   .community-card {
-    flex: 0 0 75%;
-    min-width: 200px;
+    flex: 0 0 240px;
+    width: 240px;
     height: 360px;
-    scroll-snap-align: start;
+    border-radius: 4px;
+  }
+
+  .community-card__name {
+    font-size: 1.18rem;
+    bottom: 1.6rem;
+    left: 1.3rem;
+    letter-spacing: 3px;
   }
 
   /* CTA mobile */
@@ -3449,10 +3468,33 @@ p {
     height: 38px;
   }
 
+  .communities__header,
+  .communities__slider {
+    padding: 0 1rem;
+  }
+
+  .communities__arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .communities__arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .community-card {
-    flex: 0 0 82%;
-    min-width: 190px;
+    flex: 0 0 76vw;
+    min-width: 200px;
+    max-width: 250px;
     height: 340px;
+  }
+
+  .community-card__name {
+    font-size: 1.08rem;
+    bottom: 1.4rem;
+    left: 1.15rem;
+    letter-spacing: 2.5px;
   }
 
   .about {
