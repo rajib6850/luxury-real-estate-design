@@ -652,25 +652,6 @@ p {
   height: 22px;
 }
 
-/* Bottom URL hint */
-.side-menu__url {
-  position: absolute;
-  bottom: 1.2rem;
-  left: 2rem;
-  font-size: 0.6rem;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  color: rgba(255, 255, 255, 0.3);
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.side-menu.active .side-menu__url {
-  opacity: 1;
-  transition: opacity 0.6s ease 0.5s;
-}
-
 /* ── Columns container — 5 columns side by side ─────────── */
 .side-menu__columns {
   display: flex;
@@ -761,11 +742,6 @@ p {
     rgba(15, 15, 20, 0.3) 40%,
     rgba(15, 15, 20, 0.5) 100%
   );
-}
-
-/* Thin separator line between boxes */
-.side-menu__box + .side-menu__box {
-  border-left: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* ── Box content positioning ────────────────────────────── */

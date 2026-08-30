@@ -40,6 +40,7 @@
 - **Commit `9a53b6c`:** Native Web Animations Ken Burns engine setup.
 - **Commit `27cd973`:** Cushioned return test.
 - **Commit `aedd479`:** Section 02 Full-screen Side Menu finalized & verified — 4K Retina HD assets, 0.85s reverse cascade exit animation, and Web Animations API Ken Burns zoom-in & live matrix cushioned mouse-out return (User Approved).
+- **Section 02 Clean-up:** Removed vertical box separator borders for a seamless borderless layout, deleted 'Click To Learn More' subtext, and removed the bottom URL indicator.
 
 ---
 
