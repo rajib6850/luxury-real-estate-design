@@ -41,7 +41,8 @@
 - **Commit `27cd973`:** Cushioned return test.
 - **Commit `aedd479`:** Section 02 Full-screen Side Menu finalized & verified — 4K Retina HD assets, 0.85s reverse cascade exit animation, and Web Animations API Ken Burns zoom-in & live matrix cushioned mouse-out return (User Approved).
 - **Commit `4bdd1f2`:** Cleaned side-menu box borders and removed unwanted subtext and bottom URL.
-- **Mobile & Tablet Responsive Overhaul:** Fully optimized responsive breakpoints (<= 1024px, <= 768px, <= 480px) including vertical scrollable 5-box side menu with fixed frosted close capsule, fluid clamp typography, touch scroll-snap carousels, and 100% zero horizontal overflow.
+- **Commit `1ec627f`:** Overhauled mobile and tablet responsive layout across all 10 sections.
+- **Global Typography Upgrade:** Updated master `--font-serif` design token to `Baskerville-Old` (`Libre Baskerville` / `Baskerville Old Face`) for all titles and headings across the entire website.
 
 ---
 

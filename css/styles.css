@@ -27,7 +27,7 @@
   --color-overlay-heavy: rgba(5, 5, 8, 0.82);
 
   /* Typography */
-  --font-serif: 'Playfair Display', 'Georgia', serif;
+  --font-serif: 'Libre Baskerville', 'Baskerville Old Face', 'Baskerville', 'Hoefler Text', Garamond, 'Times New Roman', serif;
   --font-sans: 'Montserrat', 'Helvetica Neue', sans-serif;
   --font-accent: 'Cormorant Garamond', 'Georgia', serif;
 
@@ -128,7 +128,8 @@ button {
   font-size: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -157,17 +158,33 @@ ul, ol {
 }
 
 /* ── 2. TYPOGRAPHY ───────────────────────────────────────── */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   font-weight: 400;
   line-height: 1.1;
   color: var(--color-dark);
 }
 
-h1 { font-size: clamp(2.8rem, 5.5vw, 4.5rem); }
-h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
-h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
-h4 { font-size: 1.3rem; }
+h1 {
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+h3 {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+}
+
+h4 {
+  font-size: 1.3rem;
+}
 
 p {
   font-size: 0.92rem;
@@ -335,10 +352,10 @@ p {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 60%, transparent 100%);
   z-index: var(--z-nav);
   transition: background 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              backdrop-filter 0.5s ease,
-              -webkit-backdrop-filter 0.5s ease,
-              box-shadow 0.5s ease,
-              border-color 0.5s ease;
+    backdrop-filter 0.5s ease,
+    -webkit-backdrop-filter 0.5s ease,
+    box-shadow 0.5s ease,
+    border-color 0.5s ease;
 }
 
 .navbar.scrolled {
@@ -423,8 +440,8 @@ p {
   transform: translateY(8px);
   pointer-events: none;
   transition: opacity 0.3s var(--ease-out-expo),
-              transform 0.3s var(--ease-out-expo),
-              visibility 0.3s ease;
+    transform 0.3s var(--ease-out-expo),
+    visibility 0.3s ease;
   z-index: 10;
 }
 
@@ -677,11 +694,25 @@ p {
 }
 
 /* Reverse staggered delays on EXIT (Box 5 closes first, Box 1 closes last) */
-.side-menu__box[data-delay="5"] { transition-delay: 0s; }
-.side-menu__box[data-delay="4"] { transition-delay: 0.09s; }
-.side-menu__box[data-delay="3"] { transition-delay: 0.18s; }
-.side-menu__box[data-delay="2"] { transition-delay: 0.27s; }
-.side-menu__box[data-delay="1"] { transition-delay: 0.36s; }
+.side-menu__box[data-delay="5"] {
+  transition-delay: 0s;
+}
+
+.side-menu__box[data-delay="4"] {
+  transition-delay: 0.09s;
+}
+
+.side-menu__box[data-delay="3"] {
+  transition-delay: 0.18s;
+}
+
+.side-menu__box[data-delay="2"] {
+  transition-delay: 0.27s;
+}
+
+.side-menu__box[data-delay="1"] {
+  transition-delay: 0.36s;
+}
 
 /* Staggered entrance delays on OPEN (Box 1 enters first, Box 5 enters last) */
 .side-menu.active .side-menu__box {
@@ -689,11 +720,25 @@ p {
   opacity: 1;
 }
 
-.side-menu.active .side-menu__box[data-delay="1"] { transition-delay: 0s; }
-.side-menu.active .side-menu__box[data-delay="2"] { transition-delay: 0.08s; }
-.side-menu.active .side-menu__box[data-delay="3"] { transition-delay: 0.16s; }
-.side-menu.active .side-menu__box[data-delay="4"] { transition-delay: 0.24s; }
-.side-menu.active .side-menu__box[data-delay="5"] { transition-delay: 0.32s; }
+.side-menu.active .side-menu__box[data-delay="1"] {
+  transition-delay: 0s;
+}
+
+.side-menu.active .side-menu__box[data-delay="2"] {
+  transition-delay: 0.08s;
+}
+
+.side-menu.active .side-menu__box[data-delay="3"] {
+  transition-delay: 0.16s;
+}
+
+.side-menu.active .side-menu__box[data-delay="4"] {
+  transition-delay: 0.24s;
+}
+
+.side-menu.active .side-menu__box[data-delay="5"] {
+  transition-delay: 0.32s;
+}
 
 /* Box background image with native Web Animations Ken Burns engine */
 .side-menu__box-bg {
@@ -726,22 +771,18 @@ p {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(15, 15, 20, 0.6) 0%,
-    rgba(15, 15, 20, 0.45) 40%,
-    rgba(15, 15, 20, 0.7) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(15, 15, 20, 0.6) 0%,
+      rgba(15, 15, 20, 0.45) 40%,
+      rgba(15, 15, 20, 0.7) 100%);
   transition: background 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .side-menu__box:hover .side-menu__box-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(15, 15, 20, 0.38) 0%,
-    rgba(15, 15, 20, 0.3) 40%,
-    rgba(15, 15, 20, 0.5) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(15, 15, 20, 0.38) 0%,
+      rgba(15, 15, 20, 0.3) 40%,
+      rgba(15, 15, 20, 0.5) 100%);
 }
 
 /* ── Box content positioning ────────────────────────────── */
@@ -948,8 +989,13 @@ p {
 }
 
 @keyframes heroKenBurns {
-  0% { transform: scale(1.08) translate(0, 0); }
-  100% { transform: scale(1.15) translate(-1%, -1%); }
+  0% {
+    transform: scale(1.08) translate(0, 0);
+  }
+
+  100% {
+    transform: scale(1.15) translate(-1%, -1%);
+  }
 }
 
 /* Cinematic gradient overlay */
@@ -961,8 +1007,7 @@ p {
       rgba(0, 0, 0, 0.35) 0%,
       rgba(0, 0, 0, 0.08) 35%,
       rgba(0, 0, 0, 0.12) 65%,
-      rgba(0, 0, 0, 0.55) 100%
-    );
+      rgba(0, 0, 0, 0.55) 100%);
   z-index: 1;
 }
 
@@ -1018,6 +1063,7 @@ p {
     transform: translateY(35px);
     filter: blur(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1041,7 +1087,9 @@ p {
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 .hero__scroll-indicator span {
@@ -1070,8 +1118,13 @@ p {
 }
 
 @keyframes scrollLine {
-  0% { top: -100%; }
-  100% { top: 100%; }
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 100%;
+  }
 }
 
 /* ── 6. CONTAINER UTILITY ─────────────────────────────────── */
@@ -1243,7 +1296,7 @@ p {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, transparent 30%, rgba(8, 8, 10, 0.7) 100%),
-              linear-gradient(to bottom, rgba(8, 8, 10, 0.5) 0%, transparent 40%);
+    linear-gradient(to bottom, rgba(8, 8, 10, 0.5) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -1552,9 +1605,17 @@ p {
 }
 
 @keyframes heartPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.3); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Price */
@@ -1643,9 +1704,9 @@ p {
   cursor: pointer;
   padding: 0;
   transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              background 0.4s ease,
-              opacity 0.4s ease,
-              box-shadow 0.4s ease;
+    background 0.4s ease,
+    opacity 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .listings__nav-dot:hover {
@@ -1739,7 +1800,7 @@ p {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, transparent 65%, rgba(17, 19, 24, 0.85) 100%),
-              linear-gradient(to top, rgba(17, 19, 24, 0.4) 0%, transparent 40%);
+    linear-gradient(to top, rgba(17, 19, 24, 0.4) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -1901,9 +1962,9 @@ p {
   cursor: pointer;
   padding: 0;
   transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              background 0.4s ease,
-              opacity 0.4s ease,
-              box-shadow 0.4s ease;
+    background 0.4s ease,
+    opacity 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .testimonial__nav-dot:hover {
@@ -2082,22 +2143,18 @@ p {
 .community-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.72) 0%,
-    rgba(0, 0, 0, 0.25) 45%,
-    rgba(0, 0, 0, 0.05) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.25) 45%,
+      rgba(0, 0, 0, 0.05) 100%);
   transition: background 0.4s ease;
 }
 
 .community-card:hover .community-card__overlay {
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.82) 0%,
-    rgba(0, 0, 0, 0.35) 45%,
-    rgba(0, 0, 0, 0.1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.35) 45%,
+      rgba(0, 0, 0, 0.1) 100%);
 }
 
 .community-card__name {
@@ -2147,9 +2204,9 @@ p {
   cursor: pointer;
   padding: 0;
   transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              background 0.4s ease,
-              opacity 0.4s ease,
-              box-shadow 0.4s ease;
+    background 0.4s ease,
+    opacity 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .communities__dot:hover {
@@ -2193,12 +2250,10 @@ p {
 .cta__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.45) 50%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.45) 50%,
+      rgba(0, 0, 0, 0.6) 100%);
 }
 
 .cta__content {
@@ -2903,6 +2958,7 @@ p {
 
 /* ── 18. REDUCED MOTION ──────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -2942,6 +2998,7 @@ p {
 
 /* ── 19. PRINT ───────────────────────────────────────────── */
 @media print {
+
   .navbar,
   .side-menu,
   .hero__scroll-indicator {
