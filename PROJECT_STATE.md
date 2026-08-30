@@ -52,8 +52,8 @@
 - **Commit `bd637ca`:** Section 05 Our Services Responsive Polish (16:10 landscape image, frosted touch cards, fluid typography).
 - **Commit `dd48325`:** Section 04 About Responsive Polish (1-column flex stack, 12px frame offsets, fluid typography).
 - **About Mobile Watermark Refinement:** Fine-tuned mobile watermark to a bold and elegant scale (`clamp(4.0rem, 13.5vw, 5.6rem)` / `clamp(3.2rem, 13.5vw, 4.4rem)`), lowered top offset (`2.2rem` / `1.8rem`), with zero side-cropping and centered horizontal lock.
-- **Global Centralized Typography Design System:** Established master fluid typography scale tokens (`--font-size-hero`, `--font-size-section-title`, `--font-size-watermark`, `--font-size-card-title`, etc.) in `:root` and responsive overrides, driving every single headline, watermark, and card title across the entire website from a single centralized design token source.
-- **Section 06 Featured Properties Responsive Overhaul:** 2-card spacious tablet view, 84% touch-peek mobile swipe carousel, editorial mobile header, and 2-tier stacked full-width touch controls.
+- **Commit `fc3c0a9`:** Section 06 Properties Responsive Overhaul & Global Centralized Typography Design System.
+- **Featured Properties Controls 2-Line Separation:** Separated pagination capsule dots and navigation round arrow buttons into 2 distinct centered lines on mobile for clean touch ergonomics and balanced vertical alignment.
 
 ---
 
