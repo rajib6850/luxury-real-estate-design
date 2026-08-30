@@ -1297,7 +1297,32 @@ p {
 
 .about__title-accent {
   font-style: italic;
-  color: var(--color-secondary);
+  display: inline-block;
+  background: linear-gradient(
+    115deg,
+    #b38728 0%,
+    #c5a047 20%,
+    #fbf5b7 45%,
+    #ffffff 50%,
+    #fbf5b7 55%,
+    #c5a047 80%,
+    #b38728 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: infiniteGoldSweep 4.5s linear infinite;
+  filter: drop-shadow(0 2px 10px rgba(197, 160, 71, 0.35));
+}
+
+@keyframes infiniteGoldSweep {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .about__description {
