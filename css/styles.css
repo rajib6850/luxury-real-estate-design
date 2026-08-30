@@ -1476,9 +1476,16 @@ p {
 }
 
 .services__eyebrow-line {
-  width: 32px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.4);
+  width: 34px;
+  height: 1.5px;
+  background: linear-gradient(90deg, #c5a047, #f8eed3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
+}
+
+.services__header.revealed .services__eyebrow-line {
+  transform: scaleX(1);
 }
 
 .services__eyebrow-text {
@@ -1517,19 +1524,40 @@ p {
   justify-content: space-between;
   gap: 2rem;
   padding: 1.35rem 1.6rem;
-  border-radius: 8px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0);
   border: 1px solid transparent;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.4s var(--ease-out-expo);
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 2.5px;
+  height: 55%;
+  background: linear-gradient(180deg, #c5a047, #f8eed3);
+  border-radius: 2px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px rgba(197, 160, 71, 0.6);
 }
 
 .service-item:hover {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  transform: translateX(8px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  transform: translateX(10px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.service-item:hover::before {
+  transform: translateY(-50%) scaleY(1);
 }
 
 .service-item__text {
@@ -1547,20 +1575,21 @@ p {
 }
 
 .service-item:hover .service-item__name {
-  color: #e5c365;
+  color: #f8eed3;
+  text-shadow: 0 0 15px rgba(248, 238, 211, 0.3);
 }
 
 .service-item__desc {
   font-family: var(--font-sans);
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.65;
   margin: 0;
   transition: color 0.3s ease;
 }
 
 .service-item:hover .service-item__desc {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .service-item__icon-wrap {
@@ -1577,12 +1606,12 @@ p {
   width: 20px;
   height: 20px;
   color: rgba(255, 255, 255, 0.45);
-  transition: color 0.3s ease, transform 0.4s var(--ease-out-expo);
+  transition: color 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .service-item:hover .service-item__icon {
-  color: #e5c365;
-  transform: translate(3px, -3px);
+  color: #f8eed3;
+  transform: translate3d(5px, -3px, 0);
 }
 
 /* ── 8. FEATURED LISTINGS ────────────────────────────────── */
@@ -2367,8 +2396,9 @@ p {
 }
 
 .community-card:hover .community-card__name {
-  color: #f3e5ab;
-  transform: rotate(180deg) translateY(4px);
+  color: #f8eed3;
+  text-shadow: 0 2px 15px rgba(248, 238, 211, 0.4);
+  transform: rotate(180deg) translateY(6px);
 }
 
 .communities__controls {
@@ -2747,6 +2777,58 @@ p {
 .delay-3 { transition-delay: 0.36s !important; }
 .delay-4 { transition-delay: 0.48s !important; }
 .delay-5 { transition-delay: 0.60s !important; }
+
+/* Scroll Progress Bar with Molten Champagne Glow */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #c5a047 0%, #f8eed3 50%, #c5a047 100%);
+  box-shadow: 0 0 12px rgba(197, 160, 71, 0.85);
+  z-index: calc(var(--z-nav) + 10);
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+
+/* Floating Concierge Back to Top Capsule */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(10, 10, 14, 0.85);
+  border: 1px solid rgba(197, 160, 71, 0.35);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: var(--z-nav);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.9);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+  background: #1a1a22;
+  border-color: var(--color-secondary);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(197, 160, 71, 0.4);
+  color: #f8eed3;
+}
 
 /* ── 16. RESPONSIVE: TABLET (<= 1024px) ──────────────────── */
 @media (max-width: 1024px) {
