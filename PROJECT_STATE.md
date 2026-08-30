@@ -55,8 +55,8 @@
 - **Commit `fc3c0a9`:** Section 06 Properties Responsive Overhaul & Global Centralized Typography Design System.
 - **Commit `48ee371`:** Section 08 Communities 2-Line Header Separation & Footer Mobile Margin Optimization.
 - **Commit `4279e49`:** Ultra-Luxury Micro-Interactions & Ambient Glow Suite.
-- **Commit `d11cddf`:** Footer Desktop Spacing Optimization & Void Elimination.
-- **Bulletproof Grayscale Image Hover System:** Scoped all grayscale hover triggers strictly to individual image elements and image containers, eliminating section-wide trigger on testimonials.
+- **Commit `ab125ef`:** Bulletproof Grayscale Image Hover System across dedicated image containers.
+- **WordPress Plugin Style Luxury Reveal Integration:** Implemented Editorial Clip-Mask Title Reveal (`.title-mask > span` / `.hero-mask > span`) across all sections, paired with 100% Solid Obsidian Shutter Curtain Wipe (`#14151c`) on properties and scroll images with zero transparency gap.
 
 ---
 

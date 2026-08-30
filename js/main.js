@@ -196,19 +196,23 @@
 
   /* ── 4. ULTRA-LUXURY SCROLL REVEAL SUITE ────────────────── */
   if (!prefersReducedMotion) {
-    const revealElements = document.querySelectorAll('.reveal, .reveal-title');
+    const revealElements = document.querySelectorAll('.reveal, .reveal-title, .title-mask');
 
     const revealObserver = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
+            const nestedMasks = entry.target.querySelectorAll('.title-mask');
+            nestedMasks.forEach(function (m) {
+              m.classList.add('revealed');
+            });
             revealObserver.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.10,
+        threshold: 0.08,
         rootMargin: '0px 0px -40px 0px',
       }
     );
@@ -217,7 +221,7 @@
       revealObserver.observe(el);
     });
 
-    const imageRevealSelector = '.image-reveal, .listing-card, .community-card, .about__image, .about__image-wrapper, .services__image-wrapper, .testimonial__image-col, .cta__background';
+    const imageRevealSelector = '.image-reveal, .listing-card, .community-card, .about__image, .about__image-wrapper, .services__image-wrapper, .testimonial__image-col, .cta__background, .about__image-inner, .services__image-card, .listing-card__image';
     const imageElements = document.querySelectorAll(imageRevealSelector);
 
     const imageObserver = new IntersectionObserver(
@@ -225,12 +229,16 @@
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
+            const nestedCurtains = entry.target.querySelectorAll('.image-reveal');
+            nestedCurtains.forEach(function (c) {
+              c.classList.add('revealed');
+            });
             imageObserver.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.08,
+        threshold: 0.06,
         rootMargin: '0px 0px -30px 0px',
       }
     );
@@ -245,7 +253,7 @@
       imageObserver.observe(el);
     });
   } else {
-    document.querySelectorAll('.reveal, .reveal-title, .image-reveal, .listing-card, .community-card, .about__image, .about__image-wrapper, .services__image-wrapper, .testimonial__image-col, .cta__background').forEach(function (el) {
+    document.querySelectorAll('.reveal, .reveal-title, .title-mask, .image-reveal, .listing-card, .community-card, .about__image, .about__image-wrapper, .services__image-wrapper, .testimonial__image-col, .cta__background').forEach(function (el) {
       el.classList.add('revealed');
     });
   }
