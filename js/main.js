@@ -71,38 +71,48 @@
     });
   });
 
-  // 2B. Side Menu Ken Burns Zoom Burn (Forward on enter, seamless reverse on leave)
+  // 2B. Side Menu Ken Burns Zoom Burn (Cushioned zero-jerk matrix interpolation)
   const sideBoxes = document.querySelectorAll('.side-menu__box');
   sideBoxes.forEach(function (box) {
     const img = box.querySelector('.side-menu__box-bg img');
     if (!img) return;
 
-    let anim = null;
+    let currentAnim = null;
 
     box.addEventListener('mouseenter', function () {
-      if (!anim) {
-        anim = img.animate(
-          [
-            { transform: 'scale(1.0) translate3d(0, 0, 0)' },
-            { transform: 'scale(1.14) translate3d(-2%, -1.5%, 0)' }
-          ],
-          {
-            duration: 4000,
-            fill: 'both',
-            easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)'
-          }
-        );
-      } else {
-        anim.playbackRate = 1;
-        anim.play();
-      }
+      if (currentAnim) currentAnim.cancel();
+
+      const currentTransform = window.getComputedStyle(img).transform;
+
+      currentAnim = img.animate(
+        [
+          { transform: currentTransform !== 'none' ? currentTransform : 'scale(1.0) translate3d(0, 0, 0)' },
+          { transform: 'scale(1.14) translate3d(-2%, -1.5%, 0)' }
+        ],
+        {
+          duration: 3500,
+          fill: 'forwards',
+          easing: 'cubic-bezier(0.25, 1, 0.5, 1)'
+        }
+      );
     });
 
     box.addEventListener('mouseleave', function () {
-      if (anim) {
-        anim.playbackRate = -1.2;
-        anim.play();
-      }
+      if (currentAnim) currentAnim.cancel();
+
+      const currentTransform = window.getComputedStyle(img).transform;
+
+      currentAnim = img.animate(
+        [
+          { transform: currentTransform !== 'none' ? currentTransform : 'scale(1.14) translate3d(-2%, -1.5%, 0)' },
+          { transform: 'scale(1.0) translate3d(0, 0, 0)' }
+        ],
+        {
+          duration: 1200,
+          fill: 'forwards',
+          easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
+        }
+      );
     });
   });
 

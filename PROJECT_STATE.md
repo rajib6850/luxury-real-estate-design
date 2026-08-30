@@ -36,9 +36,9 @@
 - **Commit `541926c`:** Added grayscale hover filter.
 - **Commit `684bd7f`:** Stabilized base image positioning.
 - **Commit `5ce50d7`:** Initial zoom burn attempt.
-- **Commit `d056f1e`:** Keyframe zoom test.
 - **Commit `70e95ce`:** Bidirectional transition test.
-- **Section 02 Web Animations Engine:** Implemented native Web Animations API Ken Burns zoom-in on `mouseenter` and seamless continuous reverse (minus) playback on `mouseleave` with synchronized luxury grayscale filter.
+- **Commit `9a53b6c`:** Native Web Animations Ken Burns engine setup.
+- **Section 02 Polish:** Implemented live transform matrix capture and cushioned decelerating ease-out return (`cubic-bezier(0.16, 1, 0.3, 1)`) on `mouseleave`, eliminating any velocity spikes, jerks, or bumps.
 
 ---
 
