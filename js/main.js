@@ -80,13 +80,13 @@
     let currentAnim = null;
 
     box.addEventListener('mouseenter', function () {
-      if (currentAnim) currentAnim.cancel();
-
+      // Read live computed transform BEFORE cancel
       const currentTransform = window.getComputedStyle(img).transform;
+      if (currentAnim) currentAnim.cancel();
 
       currentAnim = img.animate(
         [
-          { transform: currentTransform !== 'none' ? currentTransform : 'scale(1.0) translate3d(0, 0, 0)' },
+          { transform: currentTransform && currentTransform !== 'none' ? currentTransform : 'scale(1.0) translate3d(0, 0, 0)' },
           { transform: 'scale(1.14) translate3d(-2%, -1.5%, 0)' }
         ],
         {
@@ -98,19 +98,19 @@
     });
 
     box.addEventListener('mouseleave', function () {
-      if (currentAnim) currentAnim.cancel();
-
+      // Read live computed transform BEFORE cancel
       const currentTransform = window.getComputedStyle(img).transform;
+      if (currentAnim) currentAnim.cancel();
 
       currentAnim = img.animate(
         [
-          { transform: currentTransform !== 'none' ? currentTransform : 'scale(1.14) translate3d(-2%, -1.5%, 0)' },
+          { transform: currentTransform && currentTransform !== 'none' ? currentTransform : 'scale(1.0) translate3d(0, 0, 0)' },
           { transform: 'scale(1.0) translate3d(0, 0, 0)' }
         ],
         {
-          duration: 1200,
+          duration: 1600,
           fill: 'forwards',
-          easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
+          easing: 'cubic-bezier(0.25, 1, 0.5, 1)'
         }
       );
     });

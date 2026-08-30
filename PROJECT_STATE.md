@@ -38,7 +38,8 @@
 - **Commit `5ce50d7`:** Initial zoom burn attempt.
 - **Commit `70e95ce`:** Bidirectional transition test.
 - **Commit `9a53b6c`:** Native Web Animations Ken Burns engine setup.
-- **Section 02 Polish:** Implemented live transform matrix capture and cushioned decelerating ease-out return (`cubic-bezier(0.16, 1, 0.3, 1)`) on `mouseleave`, eliminating any velocity spikes, jerks, or bumps.
+- **Commit `27cd973`:** Cushioned return test.
+- **Section 02 Mouse-Out Perfected:** Captured live transform matrix before cancel invocation and eliminated fallback snap, ensuring 100% fluid, cushioned return on mouse-out from the exact millisecond cursor position.
 
 ---
 
