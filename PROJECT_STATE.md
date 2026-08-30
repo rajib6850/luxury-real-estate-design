@@ -39,7 +39,7 @@
 - **Commit `70e95ce`:** Bidirectional transition test.
 - **Commit `9a53b6c`:** Native Web Animations Ken Burns engine setup.
 - **Commit `27cd973`:** Cushioned return test.
-- **Section 02 Mouse-Out Perfected:** Captured live transform matrix before cancel invocation and eliminated fallback snap, ensuring 100% fluid, cushioned return on mouse-out from the exact millisecond cursor position.
+- **Commit `aedd479`:** Section 02 Full-screen Side Menu finalized & verified — 4K Retina HD assets, 0.85s reverse cascade exit animation, and Web Animations API Ken Burns zoom-in & live matrix cushioned mouse-out return (User Approved).
 
 ---
 
