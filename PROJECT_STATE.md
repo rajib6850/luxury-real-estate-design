@@ -55,8 +55,8 @@
 - **Commit `fc3c0a9`:** Section 06 Properties Responsive Overhaul & Global Centralized Typography Design System.
 - **Commit `48ee371`:** Section 08 Communities 2-Line Header Separation & Footer Mobile Margin Optimization.
 - **Commit `4279e49`:** Ultra-Luxury Micro-Interactions & Ambient Glow Suite.
-- **Commit `11641a7`:** Section 10 Footer Small Mobile Optimization & Cinematic Lens Blur Reveal Suite.
-- **Footer Desktop Spacing Optimization:** Removed redundant bottom margins on `.footer__social` and `.footer__main`, eliminating the excessive empty gap and creating clean balanced vertical spacing.
+- **Commit `d11cddf`:** Footer Desktop Spacing Optimization & Void Elimination.
+- **Bulletproof Grayscale Image Hover System:** Scoped all grayscale hover triggers strictly to individual image elements and image containers, eliminating section-wide trigger on testimonials.
 
 ---
 

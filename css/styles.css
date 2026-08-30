@@ -1449,6 +1449,11 @@ p {
   pointer-events: none;
 }
 
+.services__image-wrapper:hover .services__image-card img,
+.services__image-card:hover img {
+  filter: grayscale(100%) brightness(0.88) contrast(1.05);
+}
+
 .services__image-overlay {
   position: absolute;
   inset: 0;
@@ -1699,6 +1704,10 @@ p {
   transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, filter;
   pointer-events: none;
+}
+
+.listing-card:hover .listing-card__image img {
+  filter: grayscale(100%) brightness(0.88) contrast(1.05);
 }
 
 /* Subtle cinematic gradient on image */
@@ -1993,6 +2002,10 @@ p {
   transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, filter;
   pointer-events: none;
+}
+
+.testimonial__image-col:hover img {
+  filter: grayscale(100%) brightness(0.88) contrast(1.05);
 }
 
 .testimonial__image-overlay {
@@ -2358,6 +2371,10 @@ p {
   transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, filter;
   pointer-events: none;
+}
+
+.community-card:hover .community-card__image {
+  filter: grayscale(100%) brightness(0.88) contrast(1.05);
 }
 
 .community-card__overlay {
@@ -2753,10 +2770,7 @@ p {
   filter: blur(0px) brightness(1) !important;
 }
 
-.image-reveal.revealed img,
-.about__image.revealed .about__image-inner img,
-.services__image-wrapper.revealed .services__image-card img,
-.testimonial__image-col.revealed .testimonial__image-wrapper img {
+.image-reveal.revealed img {
   transform: scale(1.0);
   filter: blur(0px);
 }
@@ -2837,6 +2851,19 @@ p {
   transform: translateY(-4px) scale(1.08);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(197, 160, 71, 0.4);
   color: #f8eed3;
+}
+
+/* ── 15B. BULLETPROOF ULTRA-LUXURY GRAYSCALE HOVER SYSTEM ── */
+.about__image:hover img,
+.about__image-wrapper:hover img,
+.about__image-inner:hover img,
+.services__image-wrapper:hover img,
+.services__image-card:hover img,
+.listing-card:hover .listing-card__image img,
+.testimonial__image-col:hover img,
+.community-card:hover .community-card__image,
+.side-menu__box:hover .side-menu__bg-img {
+  filter: grayscale(100%) brightness(0.88) contrast(1.06) blur(0px) !important;
 }
 
 /* ── 16. RESPONSIVE: TABLET (<= 1024px) ──────────────────── */
