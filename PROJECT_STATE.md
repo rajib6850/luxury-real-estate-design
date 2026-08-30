@@ -53,8 +53,8 @@
 - **Commit `dd48325`:** Section 04 About Responsive Polish (1-column flex stack, 12px frame offsets, fluid typography).
 - **About Mobile Watermark Refinement:** Fine-tuned mobile watermark to a bold and elegant scale (`clamp(4.0rem, 13.5vw, 5.6rem)` / `clamp(3.2rem, 13.5vw, 4.4rem)`), lowered top offset (`2.2rem` / `1.8rem`), with zero side-cropping and centered horizontal lock.
 - **Commit `fc3c0a9`:** Section 06 Properties Responsive Overhaul & Global Centralized Typography Design System.
-- **Commit `2d082bd`:** Section 07 Testimonials Overhaul & Infinite Brand Shimmer.
-- **Section 08 Featured Communities Responsive Overhaul:** Fixed mobile slider padding selector, dynamically computed live card step distance in JS, enabled touch-action: pan-y, and tuned vertical typography coordinates.
+- **Footer Mobile Margin Optimization:** Removed bottom margin on `.footer__info-grid` and `.footer__social` on mobile for a clean, compact footer layout.
+- **Featured Communities Mobile 2-Line Header:** Separated `"Featured Communities"` title and arrow navigation into 2 distinct vertical lines on mobile, eliminating all horizontal title collisions and multi-line wrapping.
 
 ---
 
