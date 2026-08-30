@@ -42,9 +42,10 @@
 - **Commit `aedd479`:** Section 02 Full-screen Side Menu finalized & verified — 4K Retina HD assets, 0.85s reverse cascade exit animation, and Web Animations API Ken Burns zoom-in & live matrix cushioned mouse-out return (User Approved).
 - **Commit `4bdd1f2`:** Cleaned side-menu box borders and removed unwanted subtext and bottom URL.
 - **Commit `1ec627f`:** Overhauled mobile and tablet responsive layout across all 10 sections.
-- **Global Typography Upgrade:** Updated master `--font-serif` design token to `Baskerville-Old` (`Libre Baskerville` / `Baskerville Old Face`) for all titles and headings across the entire website.
+- **Commit `2b44e51`:** Updated master `--font-serif` design token to `Baskerville-Old` for all titles across the website.
+- **Section 03 Hero Banner Refinement:** Tuned headline sizing to `clamp(2.2rem, 4.2vw, 3.6rem)` with `max-width: 920px` for clean 2-line layout, deepened dark cinematic overlay, and set subtitle to crisp solid white.
 
 ---
 
 ## 🎯 Next Recommended Step
-Proceed to review **Section 03: Hero Banner** or **Section 04: About** upon user instruction.
+Proceed to review **Section 04: About** or fine-tune Section 03 upon user instruction.
