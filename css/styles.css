@@ -2641,50 +2641,70 @@ p {
   color: var(--color-secondary);
 }
 
-/* ── 15. SCROLL REVEAL & LUXURY ENTRANCE SYSTEM ──────────── */
+/* ── 15. SCROLL REVEAL & ULTRA-LUXURY MOTION SUITE ───────── */
 .reveal {
   opacity: 0;
-  transform: translateY(35px);
+  transform: translate3d(0, 30px, 0) scale(0.985);
+  filter: blur(4px);
   transition:
-    opacity 1.0s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.0s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+    opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: opacity, transform, filter;
 }
 
 .reveal--left {
   opacity: 0;
-  transform: translateX(-45px);
+  transform: translate3d(-30px, 0, 0);
+  filter: blur(3px);
   transition:
-    opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+    opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: opacity, transform, filter;
 }
 
 .reveal--right {
   opacity: 0;
-  transform: translateX(45px);
+  transform: translate3d(30px, 0, 0);
+  filter: blur(3px);
   transition:
-    opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+    opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: opacity, transform, filter;
 }
 
 .reveal--zoom {
   opacity: 0;
-  transform: scale(0.95);
+  transform: scale(0.96) translate3d(0, 15px, 0);
+  filter: blur(4px);
   transition:
-    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+    opacity 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: opacity, transform, filter;
 }
 
+/* Luxury Image Reveal with Depth Parallax */
 .image-reveal {
   opacity: 0;
-  transform: translateY(30px) scale(0.97);
+  transform: translate3d(0, 28px, 0) scale(0.98);
+  filter: blur(3px);
   transition:
-    opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+    opacity 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: opacity, transform, filter;
+}
+
+.image-reveal img,
+.about__image-inner img,
+.services__image-card img,
+.testimonial__image-wrapper img {
+  transform: scale(1.08);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: transform;
 }
 
 /* Revealed active states */
@@ -2695,6 +2715,30 @@ p {
 .image-reveal.revealed {
   opacity: 1 !important;
   transform: translate3d(0, 0, 0) scale(1) !important;
+  filter: blur(0) !important;
+}
+
+.image-reveal.revealed img,
+.about__image.revealed .about__image-inner img,
+.services__image-wrapper.revealed .services__image-card img,
+.testimonial__image-col.revealed .testimonial__image-wrapper img {
+  transform: scale(1.0);
+}
+
+/* Editorial Title Mask Reveal */
+.reveal-title {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  letter-spacing: inherit;
+  transition:
+    opacity 1.1s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal-title.revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
 }
 
 /* Stagger Delays */
@@ -2702,6 +2746,7 @@ p {
 .delay-2 { transition-delay: 0.24s !important; }
 .delay-3 { transition-delay: 0.36s !important; }
 .delay-4 { transition-delay: 0.48s !important; }
+.delay-5 { transition-delay: 0.60s !important; }
 
 /* ── 16. RESPONSIVE: TABLET (<= 1024px) ──────────────────── */
 @media (max-width: 1024px) {

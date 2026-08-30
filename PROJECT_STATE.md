@@ -54,8 +54,8 @@
 - **About Mobile Watermark Refinement:** Fine-tuned mobile watermark to a bold and elegant scale (`clamp(4.0rem, 13.5vw, 5.6rem)` / `clamp(3.2rem, 13.5vw, 4.4rem)`), lowered top offset (`2.2rem` / `1.8rem`), with zero side-cropping and centered horizontal lock.
 - **Commit `fc3c0a9`:** Section 06 Properties Responsive Overhaul & Global Centralized Typography Design System.
 - **Commit `48ee371`:** Section 08 Communities 2-Line Header Separation & Footer Mobile Margin Optimization.
-- **Section 09 Call to Action (Let's Connect) Overhaul:** Expanded content max-width to 860px for clean 2-line title ("Your Next Chapter / Starts Here"), set description paragraph to solid radiant white with subtle text shadow, and deepened the cinematic dark overlay for intense readability.
-- **Button Hover Refinement:** Replaced gold hover fill on `.btn--primary` with solid white background, black text, and crisp black border.
+- **Commit `84a2cf8`:** Section 09 Call to Action (Let's Connect) Overhaul & Button Hover Refinement.
+- **Ultra-Luxury Motion & Scroll Reveal Suite:** Overhauled all section reveals with blur-softened depth parallax (`translate3d(0, 30px, 0)`, `scale(0.985)`, `blur(4px)`), smooth image settling (`scale(1.08)` to `scale(1.0)` with `cubic-bezier(0.19, 1, 0.22, 1)`), and staggered kinetic child element reveals.
 
 ---
 

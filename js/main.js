@@ -194,9 +194,9 @@
 
   trapFocus(sideMenu);
 
-  /* ── 4. SCROLL REVEAL ──────────────────────────────────── */
+  /* ── 4. ULTRA-LUXURY SCROLL REVEAL SUITE ────────────────── */
   if (!prefersReducedMotion) {
-    const revealElements = document.querySelectorAll('.reveal');
+    const revealElements = document.querySelectorAll('.reveal, .reveal-title');
 
     const revealObserver = new IntersectionObserver(
       function (entries) {
@@ -208,23 +208,16 @@
         });
       },
       {
-        threshold: 0.12,
-        rootMargin: '0px 0px -60px 0px',
+        threshold: 0.10,
+        rootMargin: '0px 0px -40px 0px',
       }
     );
 
     revealElements.forEach(function (el) {
       revealObserver.observe(el);
     });
-  } else {
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      el.classList.add('revealed');
-    });
-  }
 
-  /* ── 4b. IMAGE SCROLL REVEAL OBSERVER ───────────────────── */
-  if (!prefersReducedMotion) {
-    const imageRevealSelector = '.image-reveal, .listing-card, .community-card, .about__image-wrapper, .services__image-wrapper, .testimonial__image-wrapper, .testimonial__image-col, .cta__background';
+    const imageRevealSelector = '.image-reveal, .listing-card, .community-card, .about__image, .about__image-wrapper, .services__image-wrapper, .testimonial__image-col, .cta__background';
     const imageElements = document.querySelectorAll(imageRevealSelector);
 
     const imageObserver = new IntersectionObserver(
@@ -246,13 +239,13 @@
       if (el.classList.contains('listing-card') || el.classList.contains('community-card')) {
         const siblingIndex = Array.from(el.parentNode.children).indexOf(el);
         if (siblingIndex > 0) {
-          el.style.transitionDelay = (siblingIndex * 0.08) + 's';
+          el.style.transitionDelay = (siblingIndex * 0.09) + 's';
         }
       }
       imageObserver.observe(el);
     });
   } else {
-    document.querySelectorAll('.image-reveal, .listing-card, .community-card, .about__image-wrapper, .services__image-wrapper, .testimonial__image-wrapper, .testimonial__image-col, .cta__background').forEach(function (el) {
+    document.querySelectorAll('.reveal, .reveal-title, .image-reveal, .listing-card, .community-card, .about__image, .about__image-wrapper, .services__image-wrapper, .testimonial__image-col, .cta__background').forEach(function (el) {
       el.classList.add('revealed');
     });
   }
