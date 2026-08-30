@@ -71,6 +71,41 @@
     });
   });
 
+  // 2B. Side Menu Ken Burns Zoom Burn (Forward on enter, seamless reverse on leave)
+  const sideBoxes = document.querySelectorAll('.side-menu__box');
+  sideBoxes.forEach(function (box) {
+    const img = box.querySelector('.side-menu__box-bg img');
+    if (!img) return;
+
+    let anim = null;
+
+    box.addEventListener('mouseenter', function () {
+      if (!anim) {
+        anim = img.animate(
+          [
+            { transform: 'scale(1.0) translate3d(0, 0, 0)' },
+            { transform: 'scale(1.14) translate3d(-2%, -1.5%, 0)' }
+          ],
+          {
+            duration: 4000,
+            fill: 'both',
+            easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)'
+          }
+        );
+      } else {
+        anim.playbackRate = 1;
+        anim.play();
+      }
+    });
+
+    box.addEventListener('mouseleave', function () {
+      if (anim) {
+        anim.playbackRate = -1.2;
+        anim.play();
+      }
+    });
+  });
+
   /* ── 3. FOCUS TRAP IN SIDE MENU ────────────────────────── */
   function trapFocus(element) {
     const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';

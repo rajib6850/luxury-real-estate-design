@@ -37,7 +37,8 @@
 - **Commit `684bd7f`:** Stabilized base image positioning.
 - **Commit `5ce50d7`:** Initial zoom burn attempt.
 - **Commit `d056f1e`:** Keyframe zoom test.
-- **Section 02 Polish:** Implemented bidirectional stateful transitions (6s slow continuous Ken Burns zoom-in on hover, and seamless 1.2s ease-out glide back on mouse-out without sudden snapping).
+- **Commit `70e95ce`:** Bidirectional transition test.
+- **Section 02 Web Animations Engine:** Implemented native Web Animations API Ken Burns zoom-in on `mouseenter` and seamless continuous reverse (minus) playback on `mouseleave` with synchronized luxury grayscale filter.
 
 ---
 
