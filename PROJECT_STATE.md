@@ -43,7 +43,8 @@
 - **Commit `4bdd1f2`:** Cleaned side-menu box borders and removed unwanted subtext and bottom URL.
 - **Commit `1ec627f`:** Overhauled mobile and tablet responsive layout across all 10 sections.
 - **Commit `2b44e51`:** Updated master `--font-serif` design token to `Baskerville-Old` for all titles across the website.
-- **Section 03 Hero Banner Refinement:** Tuned headline sizing to `clamp(2.2rem, 4.2vw, 3.6rem)` with `max-width: 920px` for clean 2-line layout, deepened dark cinematic overlay, and set subtitle to crisp solid white.
+- **Commit `8d32a02`:** Refined Hero Banner with 2-line Baskerville headline, deepened cinematic gradient overlay, and solid white subtitle.
+- **Super Luxury Animation Engine:** Activated full scroll reveal system (1.0–1.2s cubic-bezier entrance glides for `.reveal`, `.reveal--left`, `.reveal--right`, `.image-reveal`), button diagonal gold-sheen light reflection on hover, and smooth card elevation micro-interactions.
 
 ---
 
