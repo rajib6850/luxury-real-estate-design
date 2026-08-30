@@ -403,12 +403,12 @@ p {
   background: var(--color-dark);
   color: var(--color-white);
   border-color: var(--color-dark);
-  --btn-hover-bg: var(--color-secondary);
+  --btn-hover-bg: var(--color-white);
 }
 
 .btn--primary:hover {
   color: var(--color-dark);
-  border-color: var(--color-secondary);
+  border-color: var(--color-dark);
 }
 
 .btn--outline {
@@ -1927,6 +1927,15 @@ p {
   gap: 0.75rem;
 }
 
+.listings__cta-group .btn--primary {
+  --btn-hover-bg: var(--color-white);
+}
+
+.listings__cta-group .btn--primary:hover {
+  color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
 /* ── 9. TESTIMONIAL SECTION (Matched to Design) ─────────── */
 .testimonial {
   position: relative;
@@ -2433,9 +2442,9 @@ p {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.45) 50%,
-      rgba(0, 0, 0, 0.6) 100%);
+      rgba(10, 12, 16, 0.72) 0%,
+      rgba(10, 12, 16, 0.62) 50%,
+      rgba(10, 12, 16, 0.78) 100%);
 }
 
 .cta__content {
@@ -2443,7 +2452,7 @@ p {
   z-index: 1;
   text-align: center;
   padding: var(--space-xl) 2rem;
-  max-width: 680px;
+  max-width: 860px;
 }
 
 .cta__title {
@@ -2451,18 +2460,21 @@ p {
   font-size: var(--font-size-section-title);
   font-weight: 400;
   color: var(--color-white);
-  line-height: 1.12;
-  margin-bottom: 1.5rem;
+  line-height: 1.18;
+  margin: 0 auto 1.5rem;
+  max-width: 780px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
 }
 
 .cta__description {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 1.8;
-  margin-bottom: 3rem;
+  font-size: 0.92rem;
+  color: #ffffff;
+  line-height: 1.85;
+  margin: 0 auto 2.8rem;
+  max-width: 680px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cta__buttons {
@@ -3376,15 +3388,20 @@ p {
 
   /* CTA mobile */
   .cta {
-    padding: 4.5rem 0;
+    min-height: 480px;
+    padding: 4rem 0;
   }
 
-  .cta__inner {
-    padding: 3rem 1.25rem;
+  .cta__content {
+    padding: 2rem 1.25rem;
+    max-width: 100%;
   }
 
-  .cta__title {
-    font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+  .cta__description {
+    font-size: 0.88rem;
+    color: #ffffff;
+    line-height: 1.75;
+    margin-bottom: 2.2rem;
   }
 
   .cta__buttons {

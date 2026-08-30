@@ -19,7 +19,7 @@
 | **06** | **Featured Listings** | Property cards | Mobile carousel card peek & control bar stacking | Overhauled tablet 2-card view, 84% touch-peek mobile swipe carousel, editorial left header, and stacked touch CTAs | ✅ **Fixed & Verified** |
 | **07** | **Testimonials** | Side-by-side & slider | Giant unconstrained icons & generic image | Replaced with authentic happy client photo, added 14px gold micro-glyphs, activated horizontal track slider, and added mobile touch swipe | ✅ **Fixed & Verified** |
 | **08** | **Featured Communities** | Light beige reel | Missing mobile slider padding override & static card step | Fixed mobile slider selector, added dynamic card stepping in JS, tuned vertical typography, and enabled touch-action: pan-y | ✅ **Fixed & Verified** |
-| **09** | **Call to Action (CTA)** | Infinity pool card | None reported | Verified full-width background and consultation card | 🔍 Pending Review |
+| **09** | **Call to Action (CTA)** | Infinity pool card | Dim text contrast & narrow 3-line title wrap | Deepened cinematic dark overlay, expanded width for clean 2-line title, and set description text to solid white | ✅ **Fixed & Verified** |
 | **10** | **Footer Section** | Brand links & legal | None reported | Verified 2026 copyright and contact columns | 🔍 Pending Review |
 
 ---
@@ -53,10 +53,11 @@
 - **Commit `dd48325`:** Section 04 About Responsive Polish (1-column flex stack, 12px frame offsets, fluid typography).
 - **About Mobile Watermark Refinement:** Fine-tuned mobile watermark to a bold and elegant scale (`clamp(4.0rem, 13.5vw, 5.6rem)` / `clamp(3.2rem, 13.5vw, 4.4rem)`), lowered top offset (`2.2rem` / `1.8rem`), with zero side-cropping and centered horizontal lock.
 - **Commit `fc3c0a9`:** Section 06 Properties Responsive Overhaul & Global Centralized Typography Design System.
-- **Footer Mobile Margin Optimization:** Removed bottom margin on `.footer__info-grid` and `.footer__social` on mobile for a clean, compact footer layout.
-- **Featured Communities Mobile 2-Line Header:** Separated `"Featured Communities"` title and arrow navigation into 2 distinct vertical lines on mobile, eliminating all horizontal title collisions and multi-line wrapping.
+- **Commit `48ee371`:** Section 08 Communities 2-Line Header Separation & Footer Mobile Margin Optimization.
+- **Section 09 Call to Action (Let's Connect) Overhaul:** Expanded content max-width to 860px for clean 2-line title ("Your Next Chapter / Starts Here"), set description paragraph to solid radiant white with subtle text shadow, and deepened the cinematic dark overlay for intense readability.
+- **Button Hover Refinement:** Replaced gold hover fill on `.btn--primary` with solid white background, black text, and crisp black border.
 
 ---
 
 ## 🎯 Next Recommended Step
-Proceed to review and polish **Section 09: Call to Action (CTA)** upon user instruction.
+Proceed to review and polish **Section 10: Footer Section** upon user instruction.
