@@ -1256,11 +1256,11 @@ p {
   position: absolute;
   top: 1.8rem;
   left: 50%;
-  transform: translateX(-50%) translateY(35px) scale(0.92);
+  transform: translate3d(-50%, 0, 0);
   font-family: var(--font-serif);
   font-size: clamp(5.5rem, 13vw, 11.5rem);
   font-weight: 400;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.22em;
   color: rgba(0, 0, 0, 0.032);
   text-transform: uppercase;
   pointer-events: none;
@@ -1268,18 +1268,8 @@ p {
   z-index: 0;
   user-select: none;
   line-height: 1;
-  opacity: 0;
-  transition:
-    opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.6s cubic-bezier(0.16, 1, 0.3, 1),
-    letter-spacing 1.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform, letter-spacing;
-}
-
-.about__watermark.revealed {
-  opacity: 1 !important;
-  transform: translateX(-50%) translateY(0) scale(1) !important;
-  letter-spacing: 0.22em !important;
+  opacity: 1;
+  will-change: transform;
 }
 
 .about__content {
@@ -2635,13 +2625,6 @@ p {
 .image-reveal.revealed {
   opacity: 1 !important;
   transform: translate3d(0, 0, 0) scale(1) !important;
-}
-
-.about__watermark.reveal.revealed,
-div.about__watermark.revealed {
-  opacity: 1 !important;
-  transform: translateX(-50%) translateY(0) scale(1) !important;
-  letter-spacing: 0.22em !important;
 }
 
 /* Stagger Delays */

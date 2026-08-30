@@ -697,9 +697,9 @@
 
         if (rect.bottom >= -100 && rect.top <= winH + 100) {
           var progress = (winH - rect.top) / (winH + rect.height);
-          // Smooth horizontal glide and subtle vertical depth
-          var xShift = -50 + (progress - 0.5) * 18;
-          var yShift = (progress - 0.5) * 28;
+          // Architectural kinetic horizontal glide and subtle vertical float
+          var xShift = -50 + (progress - 0.5) * 24;
+          var yShift = (progress - 0.5) * 36;
           aboutWatermark.style.transform = 'translate3d(' + xShift + '%, ' + yShift + 'px, 0)';
         }
         aboutTicking = false;
