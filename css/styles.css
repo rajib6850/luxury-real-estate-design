@@ -714,31 +714,40 @@ p {
 .side-menu.active .side-menu__box[data-delay="4"] { transition-delay: 0.24s; }
 .side-menu.active .side-menu__box[data-delay="5"] { transition-delay: 0.32s; }
 
-/* Box background image with silky grayscale & slow Ken Burns zoom burn on hover */
+/* Box background image with continuous Ken Burns zoom burn animation on hover */
 .side-menu__box-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
   overflow: hidden;
   background: #000000;
+  pointer-events: none;
 }
 
 .side-menu__box-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.0);
+  transform: scale(1.0) translate3d(0, 0, 0);
   filter: grayscale(0%) brightness(0.95);
-  transition: transform 1.0s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s ease;
   will-change: transform, filter;
+  pointer-events: none;
 }
 
 .side-menu__box:hover .side-menu__box-bg img {
-  transform: scale(1.08);
   filter: grayscale(100%) brightness(0.82) contrast(1.05);
-  transition: transform 3.5s cubic-bezier(0.25, 1, 0.5, 1),
-              filter 0.8s ease;
+  animation: menuKenBurns 6s cubic-bezier(0.2, 0.8, 0.2, 1) infinite alternate;
+}
+
+@keyframes menuKenBurns {
+  0% {
+    transform: scale(1.0) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(-1.5%, -1%, 0);
+  }
 }
 
 /* Box dark overlay with smooth transitions */
@@ -746,6 +755,7 @@ p {
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;
   background: linear-gradient(
     180deg,
     rgba(15, 15, 20, 0.6) 0%,

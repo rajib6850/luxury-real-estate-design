@@ -35,7 +35,8 @@
 - **Commit `a7bd7fb`:** Unified image hover transition curve.
 - **Commit `541926c`:** Added grayscale hover filter.
 - **Commit `684bd7f`:** Stabilized base image positioning.
-- **Section 02 Polish:** Implemented cinematic Ken Burns slow continuous zoom burn (3.5s slow scale-in drift on hover, 1s smooth return on mouse leave) seamlessly synchronized with the luxury 100% grayscale filter.
+- **Commit `5ce50d7`:** Initial zoom burn attempt.
+- **Section 02 Ken Burns Keyframe Engine:** Engineered authentic `@keyframes menuKenBurns` (continuous 6s slow cinematic zoom & drift in grayscale, with smooth 1.2s ease-out return and pointer-event stabilization).
 
 ---
 
