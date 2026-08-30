@@ -36,7 +36,8 @@
 - **Commit `541926c`:** Added grayscale hover filter.
 - **Commit `684bd7f`:** Stabilized base image positioning.
 - **Commit `5ce50d7`:** Initial zoom burn attempt.
-- **Section 02 Ken Burns Keyframe Engine:** Engineered authentic `@keyframes menuKenBurns` (continuous 6s slow cinematic zoom & drift in grayscale, with smooth 1.2s ease-out return and pointer-event stabilization).
+- **Commit `d056f1e`:** Keyframe zoom test.
+- **Section 02 Polish:** Implemented bidirectional stateful transitions (6s slow continuous Ken Burns zoom-in on hover, and seamless 1.2s ease-out glide back on mouse-out without sudden snapping).
 
 ---
 
