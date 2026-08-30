@@ -49,7 +49,8 @@
 - **Commit `7013ec4` / `27c1f86`:** Added Super Luxury Scroll Suite (gold tracker, obsidian scrollbar, concierge back-to-top) and architectural kinetic watermark scroll parallax.
 - **Commit `f95f641`:** Infinite soft champagne gold shimmer on "West Coast." title accent.
 - **Commit `c0f18d2`:** Centralized Universal Web Animations API Live Matrix Zoom Engine across all image sections.
-- **Section 05 Our Services Responsive Polish:** Overhauled mobile and tablet layouts with landscape 16:10 architectural image framing, frosted glass touch cards with gold active feedback, and fluid Baskerville typography.
+- **Commit `bd637ca`:** Section 05 Our Services Responsive Polish (16:10 landscape image, frosted touch cards, fluid typography).
+- **Section 04 About Responsive Polish:** Overhauled tablet and mobile layouts with clean 1-column flex stacking, 12px responsive gold frame offsets, fluid Baskerville typography, centered mobile watermark, and full-width mobile CTA button.
 
 ---
 
