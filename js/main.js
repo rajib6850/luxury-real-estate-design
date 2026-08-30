@@ -208,6 +208,49 @@
     });
   }
 
+  /* ── 4c. ABOUT SECTION IMAGE SMOOTH KEN BURNS ───────────── */
+  const aboutWrapper = document.querySelector('.about__image-wrapper');
+  if (aboutWrapper) {
+    const aboutImg = aboutWrapper.querySelector('.about__image-inner img');
+    if (aboutImg) {
+      let aboutAnim = null;
+
+      aboutWrapper.addEventListener('mouseenter', function () {
+        const currentTransform = window.getComputedStyle(aboutImg).transform;
+        if (aboutAnim) aboutAnim.cancel();
+
+        aboutAnim = aboutImg.animate(
+          [
+            { transform: currentTransform && currentTransform !== 'none' ? currentTransform : 'scale(1.0) translate3d(0, 0, 0)' },
+            { transform: 'scale(1.10) translate3d(0, 0, 0)' }
+          ],
+          {
+            duration: 3500,
+            fill: 'forwards',
+            easing: 'cubic-bezier(0.25, 1, 0.5, 1)'
+          }
+        );
+      });
+
+      aboutWrapper.addEventListener('mouseleave', function () {
+        const currentTransform = window.getComputedStyle(aboutImg).transform;
+        if (aboutAnim) aboutAnim.cancel();
+
+        aboutAnim = aboutImg.animate(
+          [
+            { transform: currentTransform && currentTransform !== 'none' ? currentTransform : 'scale(1.10) translate3d(0, 0, 0)' },
+            { transform: 'scale(1.0) translate3d(0, 0, 0)' }
+          ],
+          {
+            duration: 1600,
+            fill: 'forwards',
+            easing: 'cubic-bezier(0.25, 1, 0.5, 1)'
+          }
+        );
+      });
+    }
+  }
+
   /* ── 5. STAGGERED REVEALS ──────────────────────────────── */
   if (!prefersReducedMotion) {
     const staggerContainers = document.querySelectorAll('[data-stagger]');

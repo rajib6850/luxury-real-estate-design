@@ -13,8 +13,8 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **01** | **Top Navbar & Header** | Overlapping text | Submenus rendered inline due to missing CSS for `.navbar__submenu` | Added proper absolute positioning, glassmorphism card, hover transitions, and clean dividers | ✅ **Fixed & Verified** |
 | **02** | **Full-screen 5-Col Side Menu** | Blurry images & abrupt exit | Low-res image params (`w=500, q=70`) and missing exit reverse delays | Upgraded all 5 columns to 4K Retina HD (`w=1400-1600, q=90`) and added reverse cascade exit animation | ✅ **Fixed & Verified** |
-| **03** | **Hero Banner** | Ken Burns & guide CTAs | None reported | Verified typography, button interactions, and scroll indicator | 🔍 Pending Review |
-| **04** | **About Section** | 2-col with watermark | Extraneous controls previously removed | Verified watermark, typography, and gold frame | 🔍 Pending Review |
+| **03** | **Hero Banner** | Ken Burns & guide CTAs | Headline 3-line wrap & dim subtitle | Tuned headline to clean 2-line layout, deepened cinematic overlay, and set subtitle to solid white | ✅ **Fixed & Verified** |
+| **04** | **About Section** | 2-col with watermark | Rounded corners, hover jump & watermark alignment | Sharp 90° corners, zero-flicker bounding box, morphing grayscale frame, live matrix zoom & centered watermark entrance | ✅ **Fixed & Verified** |
 | **05** | **Our Services** | Portrait frame & 3 items | None reported | Verified left photo, gold eyebrow, heading, and 3 hover items | 🔍 Pending Review |
 | **06** | **Featured Listings** | Property cards | None reported | Verified carousel, metadata, and capsule controls | 🔍 Pending Review |
 | **07** | **Testimonials** | Side-by-side & slider | Dot color updated | Verified client photo, quote slider, and pure white dots | 🔍 Pending Review |
@@ -44,9 +44,10 @@
 - **Commit `1ec627f`:** Overhauled mobile and tablet responsive layout across all 10 sections.
 - **Commit `2b44e51`:** Updated master `--font-serif` design token to `Baskerville-Old` for all titles across the website.
 - **Commit `8d32a02`:** Refined Hero Banner with 2-line Baskerville headline, deepened cinematic gradient overlay, and solid white subtitle.
-- **Super Luxury Animation Engine:** Activated full scroll reveal system (1.0–1.2s cubic-bezier entrance glides for `.reveal`, `.reveal--left`, `.reveal--right`, `.image-reveal`), button diagonal gold-sheen light reflection on hover, and smooth card elevation micro-interactions.
+- **Commit `6752b1e`:** Activated full super luxury scroll reveal engine and button sheen reflection.
+- **Section 04 About Complete Overhaul:** Sharp 90° corners, zero-flicker fixed padding bounding box, GPU morphing gold-to-grayscale frame on hover, Web Animations API live matrix 3.5s zoom & 1.6s smooth return, and perfectly centered 1.6s breathing scroll entrance for "ABOUT" watermark.
 
 ---
 
 ## 🎯 Next Recommended Step
-Proceed to review **Section 04: About** or fine-tune Section 03 upon user instruction.
+Proceed to review and polish **Section 05: Our Services** upon user instruction.
