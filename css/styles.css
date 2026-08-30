@@ -1254,7 +1254,7 @@ p {
 
 .about__watermark {
   position: absolute;
-  top: 1.8rem;
+  top: 3.5rem;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
   font-family: var(--font-serif);
