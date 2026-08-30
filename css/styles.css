@@ -103,46 +103,6 @@ body.menu-open {
   overflow: hidden;
 }
 
-/* ── Custom Luxury Obsidian & Gold Scrollbar ──────────────── */
-::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-}
-
-::-webkit-scrollbar-track {
-  background: #09090c;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(197, 160, 71, 0.45) 0%, rgba(197, 160, 71, 0.8) 100%);
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #c5a047 0%, #e0c878 100%);
-  box-shadow: 0 0 10px rgba(197, 160, 71, 0.5);
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(197, 160, 71, 0.6) #09090c;
-}
-
-/* ── Top Luxury Scroll Progress Bar ──────────────────────── */
-.scroll-progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 2.5px;
-  width: 0%;
-  background: linear-gradient(90deg, #c5a047 0%, #ecdba8 50%, #c5a047 100%);
-  box-shadow: 0 0 12px rgba(197, 160, 71, 0.65), 0 0 4px rgba(255, 255, 255, 0.8);
-  z-index: 10000;
-  pointer-events: none;
-  transition: width 0.08s linear;
-}
-
 /* ── Luxury Floating Back to Top Capsule ─────────────────── */
 .back-to-top {
   position: fixed;
@@ -2847,19 +2807,6 @@ p {
 .delay-3 { transition-delay: 0.28s !important; }
 .delay-4 { transition-delay: 0.38s !important; }
 .delay-5 { transition-delay: 0.48s !important; }
-
-/* Scroll Progress Bar with Molten Champagne Glow */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 2.5px;
-  background: linear-gradient(90deg, #c5a047 0%, #f8eed3 50%, #c5a047 100%);
-  box-shadow: 0 0 12px rgba(197, 160, 71, 0.85);
-  z-index: calc(var(--z-nav) + 10);
-  width: 0%;
-  transition: width 0.1s ease-out;
-}
 
 /* Floating Concierge Back to Top Capsule */
 .back-to-top {

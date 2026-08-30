@@ -10,7 +10,6 @@
 
   /* ── 1. NAVBAR & LUXURY SCROLL SUITE ──────────────────── */
   const navbar = document.getElementById('navbar');
-  const scrollProgress = document.getElementById('scroll-progress');
   const backToTopBtn = document.getElementById('back-to-top');
   const heroImage = document.querySelector('.hero__background-image');
 
@@ -18,7 +17,6 @@
 
   function updateScrollSuite() {
     const scrollY = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
 
     // 1. Navbar frosted state
     if (navbar) {
@@ -29,13 +27,7 @@
       }
     }
 
-    // 2. Top gold progress line
-    if (scrollProgress && docHeight > 0) {
-      const scrollPercent = Math.min(Math.max((scrollY / docHeight) * 100, 0), 100);
-      scrollProgress.style.width = scrollPercent + '%';
-    }
-
-    // 3. Back-to-top concierge button
+    // 2. Back-to-top concierge button
     if (backToTopBtn) {
       if (scrollY > 500) {
         backToTopBtn.classList.add('visible');

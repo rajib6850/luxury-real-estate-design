@@ -55,8 +55,8 @@
 - **Commit `fc3c0a9`:** Section 06 Properties Responsive Overhaul & Global Centralized Typography Design System.
 - **Commit `48ee371`:** Section 08 Communities 2-Line Header Separation & Footer Mobile Margin Optimization.
 - **Commit `4279e49`:** Ultra-Luxury Micro-Interactions & Ambient Glow Suite.
-- **Commit `ab125ef`:** Bulletproof Grayscale Image Hover System across dedicated image containers.
-- **WordPress Plugin Style Luxury Reveal Integration:** Implemented Editorial Clip-Mask Title Reveal (`.title-mask > span` / `.hero-mask > span`) across all sections, paired with 100% Solid Obsidian Shutter Curtain Wipe (`#14151c`) on properties and scroll images with zero transparency gap.
+- **Commit `94896d4`:** WordPress Plugin Style Luxury Reveal Integration (Title clip-mask + Solid obsidian shutter curtain wipe).
+- **Default Native Scrollbar & Clean Header Restoration:** Removed custom scrollbar styles and removed the top scroll progress bar from HTML, CSS, and JS.
 
 ---
 
