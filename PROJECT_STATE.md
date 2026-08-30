@@ -46,7 +46,9 @@
 - **Commit `8d32a02`:** Refined Hero Banner with 2-line Baskerville headline, deepened cinematic gradient overlay, and solid white subtitle.
 - **Commit `6752b1e`:** Activated full super luxury scroll reveal engine and button sheen reflection.
 - **Commit `450e108`:** Completed Section 04 About overhaul with sharp 90° corners, zero-flicker fixed bounding box, morphing grayscale frame, live matrix zoom, and centered watermark entrance.
-- **Super Luxury Scroll Suite:** Added custom obsidian & gold scrollbar, top champagne-gold glowing progress tracker, frosted-glass floating back-to-top concierge capsule, and architectural 60fps parallax depth.
+- **Commit `7013ec4` / `27c1f86`:** Added Super Luxury Scroll Suite (gold tracker, obsidian scrollbar, concierge back-to-top) and architectural kinetic watermark scroll parallax.
+- **Commit `f95f641`:** Infinite soft champagne gold shimmer on "West Coast." title accent.
+- **Global Cinematic Image Zoom Engine:** Standardized all image hover zooms across the entire site (Services, Listings, Testimonial, Communities) to 3.5s continuous slow zoom-in on enter and 1.4s smooth cushioned return on leave.
 
 ---
 
