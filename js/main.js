@@ -257,21 +257,31 @@
     });
   }
 
-  /* ── 4c. ABOUT SECTION IMAGE SMOOTH KEN BURNS ───────────── */
-  const aboutWrapper = document.querySelector('.about__image-wrapper');
-  if (aboutWrapper) {
-    const aboutImg = aboutWrapper.querySelector('.about__image-inner img');
-    if (aboutImg) {
-      let aboutAnim = null;
+  /* ── 4c. UNIVERSAL CENTRALIZED IMAGE HOVER ZOOM ENGINE ─────── */
+  const universalZoomTargets = [
+    { container: '.about__image-wrapper', img: '.about__image-inner img', maxScale: '1.10' },
+    { container: '.services__image-card', img: 'img', maxScale: '1.09' },
+    { container: '.listing-card', img: '.listing-card__image img', maxScale: '1.09' },
+    { container: '.testimonial__image-col', img: 'img', maxScale: '1.08' },
+    { container: '.community-card', img: '.community-card__image', maxScale: '1.09' }
+  ];
 
-      aboutWrapper.addEventListener('mouseenter', function () {
-        const currentTransform = window.getComputedStyle(aboutImg).transform;
-        if (aboutAnim) aboutAnim.cancel();
+  universalZoomTargets.forEach(function (target) {
+    const containers = document.querySelectorAll(target.container);
+    containers.forEach(function (box) {
+      const img = box.querySelector(target.img);
+      if (!img) return;
 
-        aboutAnim = aboutImg.animate(
+      let currentAnim = null;
+
+      box.addEventListener('mouseenter', function () {
+        const currentTransform = window.getComputedStyle(img).transform;
+        if (currentAnim) currentAnim.cancel();
+
+        currentAnim = img.animate(
           [
             { transform: currentTransform && currentTransform !== 'none' ? currentTransform : 'scale(1.0) translate3d(0, 0, 0)' },
-            { transform: 'scale(1.10) translate3d(0, 0, 0)' }
+            { transform: 'scale(' + target.maxScale + ') translate3d(0, 0, 0)' }
           ],
           {
             duration: 3500,
@@ -281,13 +291,13 @@
         );
       });
 
-      aboutWrapper.addEventListener('mouseleave', function () {
-        const currentTransform = window.getComputedStyle(aboutImg).transform;
-        if (aboutAnim) aboutAnim.cancel();
+      box.addEventListener('mouseleave', function () {
+        const currentTransform = window.getComputedStyle(img).transform;
+        if (currentAnim) currentAnim.cancel();
 
-        aboutAnim = aboutImg.animate(
+        currentAnim = img.animate(
           [
-            { transform: currentTransform && currentTransform !== 'none' ? currentTransform : 'scale(1.10) translate3d(0, 0, 0)' },
+            { transform: currentTransform && currentTransform !== 'none' ? currentTransform : 'scale(' + target.maxScale + ') translate3d(0, 0, 0)' },
             { transform: 'scale(1.0) translate3d(0, 0, 0)' }
           ],
           {
@@ -297,8 +307,8 @@
           }
         );
       });
-    }
-  }
+    });
+  });
 
   /* ── 5. STAGGERED REVEALS ──────────────────────────────── */
   if (!prefersReducedMotion) {

@@ -48,7 +48,8 @@
 - **Commit `450e108`:** Completed Section 04 About overhaul with sharp 90° corners, zero-flicker fixed bounding box, morphing grayscale frame, live matrix zoom, and centered watermark entrance.
 - **Commit `7013ec4` / `27c1f86`:** Added Super Luxury Scroll Suite (gold tracker, obsidian scrollbar, concierge back-to-top) and architectural kinetic watermark scroll parallax.
 - **Commit `f95f641`:** Infinite soft champagne gold shimmer on "West Coast." title accent.
-- **Global Cinematic Image Zoom Engine:** Standardized all image hover zooms across the entire site (Services, Listings, Testimonial, Communities) to 3.5s continuous slow zoom-in on enter and 1.4s smooth cushioned return on leave.
+- **Commit `79a026c`:** Initial global image zoom setup.
+- **Universal Centralized Live Matrix Zoom Engine:** Integrated the native Web Animations API live matrix capture engine across all website images (Services, Listings, Testimonial, Communities, About) with `pointer-events: none` on imagery and 0ms snap-free cushioned return.
 
 ---
 

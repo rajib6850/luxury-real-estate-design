@@ -1435,14 +1435,9 @@ p {
   object-fit: cover;
   display: block;
   transform: scale(1.0) translate3d(0, 0, 0);
-  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, filter;
-}
-
-.services__image-card:hover img,
-.services__image-wrapper:hover .services__image-card img {
-  transform: scale(1.08) translate3d(0, 0, 0);
-  transition: transform 3.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
+  pointer-events: none;
 }
 
 .services__image-overlay {
@@ -1663,13 +1658,9 @@ p {
   object-fit: cover;
   display: block;
   transform: scale(1.0) translate3d(0, 0, 0);
-  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, filter;
-}
-
-.listing-card:hover .listing-card__image img {
-  transform: scale(1.08) translate3d(0, 0, 0);
-  transition: transform 3.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
+  pointer-events: none;
 }
 
 /* Subtle cinematic gradient on image */
@@ -1946,14 +1937,9 @@ p {
   object-fit: cover;
   object-position: center center;
   transform: scale(1.0) translate3d(0, 0, 0);
-  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, filter;
-}
-
-.testimonial:hover .testimonial__image-col img,
-.testimonial__image-col:hover img {
-  transform: scale(1.08) translate3d(0, 0, 0);
-  transition: transform 3.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
+  pointer-events: none;
 }
 
 .testimonial__image-overlay {
@@ -2294,13 +2280,9 @@ p {
   object-fit: cover;
   display: block;
   transform: scale(1.0) translate3d(0, 0, 0);
-  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, filter;
-}
-
-.community-card:hover .community-card__image {
-  transform: scale(1.08) translate3d(0, 0, 0);
-  transition: transform 3.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
+  pointer-events: none;
 }
 
 .community-card__overlay {
