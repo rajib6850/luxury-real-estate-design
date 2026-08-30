@@ -33,7 +33,8 @@
 - **Commit `e5b1762`:** Upgraded 5 side-menu background images to 4K Ultra HD and implemented reverse cascade smooth exit animation.
 - **Commit `c71192b`:** Tuned exit duration to 0.85s with 0.09s step delays for a slower, cinematic feel.
 - **Commit `a7bd7fb`:** Unified image hover transition curve.
-- **Section 02 Polish:** Configured silky smooth 100% grayscale filter transition and gentle 3% luxury micro-zoom on side-menu box hover.
+- **Commit `541926c`:** Added grayscale hover filter.
+- **Section 02 Final Polish:** Removed zoom scaling (`transform: none`) to eliminate sudden image expansion, and applied silky 0.8s grayscale fade on box hover.
 
 ---
 
