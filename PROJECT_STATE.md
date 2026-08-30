@@ -15,7 +15,7 @@
 | **02** | **Full-screen 5-Col Side Menu** | Blurry images & abrupt exit | Low-res image params (`w=500, q=70`) and missing exit reverse delays | Upgraded all 5 columns to 4K Retina HD (`w=1400-1600, q=90`) and added reverse cascade exit animation | ✅ **Fixed & Verified** |
 | **03** | **Hero Banner** | Ken Burns & guide CTAs | Headline 3-line wrap & dim subtitle | Tuned headline to clean 2-line layout, deepened cinematic overlay, and set subtitle to solid white | ✅ **Fixed & Verified** |
 | **04** | **About Section** | 2-col with watermark | Rounded corners, hover jump & watermark alignment | Sharp 90° corners, zero-flicker bounding box, morphing grayscale frame, live matrix zoom & centered watermark entrance | ✅ **Fixed & Verified** |
-| **05** | **Our Services** | Portrait frame & 3 items | None reported | Verified left photo, gold eyebrow, heading, and 3 hover items | 🔍 Pending Review |
+| **05** | **Our Services** | Portrait frame & 3 items | Mobile aspect ratio crop & desktop grid collapse | Overhauled tablet & mobile responsive flow, 16:10 landscape architectural card, frosted touch cards, and fluid typography | ✅ **Fixed & Verified** |
 | **06** | **Featured Listings** | Property cards | None reported | Verified carousel, metadata, and capsule controls | 🔍 Pending Review |
 | **07** | **Testimonials** | Side-by-side & slider | Dot color updated | Verified client photo, quote slider, and pure white dots | 🔍 Pending Review |
 | **08** | **Featured Communities** | Light beige reel | None reported | Verified 7 authentic cards with vertical text, arrows, and continuous loop | 🔍 Pending Review |
@@ -48,10 +48,10 @@
 - **Commit `450e108`:** Completed Section 04 About overhaul with sharp 90° corners, zero-flicker fixed bounding box, morphing grayscale frame, live matrix zoom, and centered watermark entrance.
 - **Commit `7013ec4` / `27c1f86`:** Added Super Luxury Scroll Suite (gold tracker, obsidian scrollbar, concierge back-to-top) and architectural kinetic watermark scroll parallax.
 - **Commit `f95f641`:** Infinite soft champagne gold shimmer on "West Coast." title accent.
-- **Commit `79a026c`:** Initial global image zoom setup.
-- **Universal Centralized Live Matrix Zoom Engine:** Integrated the native Web Animations API live matrix capture engine across all website images (Services, Listings, Testimonial, Communities, About) with `pointer-events: none` on imagery and 0ms snap-free cushioned return.
+- **Commit `c0f18d2`:** Centralized Universal Web Animations API Live Matrix Zoom Engine across all image sections.
+- **Section 05 Our Services Responsive Polish:** Overhauled mobile and tablet layouts with landscape 16:10 architectural image framing, frosted glass touch cards with gold active feedback, and fluid Baskerville typography.
 
 ---
 
 ## 🎯 Next Recommended Step
-Proceed to review and polish **Section 05: Our Services** upon user instruction.
+Proceed to review and polish **Section 06: Featured Listings / Properties** upon user instruction.
