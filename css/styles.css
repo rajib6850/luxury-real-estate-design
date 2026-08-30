@@ -1318,8 +1318,8 @@ p {
 
 .about__image-frame {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 32px;
+  left: 32px;
   width: calc(100% - 32px);
   height: calc(100% - 32px);
   border: 1.5px solid rgba(197, 160, 71, 0.65);
@@ -1330,7 +1330,7 @@ p {
 }
 
 .about__image-wrapper:hover .about__image-frame {
-  transform: translate(16px, 16px);
+  transform: translate(-16px, -16px);
   border-color: rgba(255, 255, 255, 0.9);
 }
 
