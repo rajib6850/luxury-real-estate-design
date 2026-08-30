@@ -707,9 +707,10 @@
 
         if (rect.bottom >= -100 && rect.top <= winH + 100) {
           var progress = (winH - rect.top) / (winH + rect.height);
-          // Architectural kinetic horizontal glide and subtle vertical float
-          var xShift = -50 + (progress - 0.5) * 24;
-          var yShift = (progress - 0.5) * 36;
+          var isMobile = window.innerWidth <= 768;
+          // Desktop: Architectural kinetic horizontal glide; Mobile: Locked to -50% to prevent any side cropping
+          var xShift = isMobile ? -50 : (-50 + (progress - 0.5) * 20);
+          var yShift = (progress - 0.5) * (isMobile ? 16 : 36);
           aboutWatermark.style.transform = 'translate3d(' + xShift + '%, ' + yShift + 'px, 0)';
         }
         aboutTicking = false;

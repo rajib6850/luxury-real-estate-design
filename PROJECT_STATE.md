@@ -16,7 +16,7 @@
 | **03** | **Hero Banner** | Ken Burns & guide CTAs | Headline 3-line wrap & dim subtitle | Tuned headline to clean 2-line layout, deepened cinematic overlay, and set subtitle to solid white | ✅ **Fixed & Verified** |
 | **04** | **About Section** | 2-col with watermark | Rounded corners, hover jump & watermark alignment | Sharp 90° corners, zero-flicker bounding box, morphing grayscale frame, live matrix zoom & centered watermark entrance | ✅ **Fixed & Verified** |
 | **05** | **Our Services** | Portrait frame & 3 items | Mobile aspect ratio crop & desktop grid collapse | Overhauled tablet & mobile responsive flow, 16:10 landscape architectural card, frosted touch cards, and fluid typography | ✅ **Fixed & Verified** |
-| **06** | **Featured Listings** | Property cards | None reported | Verified carousel, metadata, and capsule controls | 🔍 Pending Review |
+| **06** | **Featured Listings** | Property cards | Mobile carousel card peek & control bar stacking | Overhauled tablet 2-card view, 84% touch-peek mobile swipe carousel, editorial left header, and stacked touch CTAs | ✅ **Fixed & Verified** |
 | **07** | **Testimonials** | Side-by-side & slider | Dot color updated | Verified client photo, quote slider, and pure white dots | 🔍 Pending Review |
 | **08** | **Featured Communities** | Light beige reel | None reported | Verified 7 authentic cards with vertical text, arrows, and continuous loop | 🔍 Pending Review |
 | **09** | **Call to Action (CTA)** | Infinity pool card | None reported | Verified full-width background and consultation card | 🔍 Pending Review |
@@ -50,9 +50,12 @@
 - **Commit `f95f641`:** Infinite soft champagne gold shimmer on "West Coast." title accent.
 - **Commit `c0f18d2`:** Centralized Universal Web Animations API Live Matrix Zoom Engine across all image sections.
 - **Commit `bd637ca`:** Section 05 Our Services Responsive Polish (16:10 landscape image, frosted touch cards, fluid typography).
-- **Section 04 About Responsive Polish:** Overhauled tablet and mobile layouts with clean 1-column flex stacking, 12px responsive gold frame offsets, fluid Baskerville typography, centered mobile watermark, and full-width mobile CTA button.
+- **Commit `dd48325`:** Section 04 About Responsive Polish (1-column flex stack, 12px frame offsets, fluid typography).
+- **About Mobile Watermark Refinement:** Fine-tuned mobile watermark to a bold and elegant scale (`clamp(4.0rem, 13.5vw, 5.6rem)` / `clamp(3.2rem, 13.5vw, 4.4rem)`), lowered top offset (`2.2rem` / `1.8rem`), with zero side-cropping and centered horizontal lock.
+- **Global Centralized Typography Design System:** Established master fluid typography scale tokens (`--font-size-hero`, `--font-size-section-title`, `--font-size-watermark`, `--font-size-card-title`, etc.) in `:root` and responsive overrides, driving every single headline, watermark, and card title across the entire website from a single centralized design token source.
+- **Section 06 Featured Properties Responsive Overhaul:** 2-card spacious tablet view, 84% touch-peek mobile swipe carousel, editorial mobile header, and 2-tier stacked full-width touch controls.
 
 ---
 
 ## 🎯 Next Recommended Step
-Proceed to review and polish **Section 06: Featured Listings / Properties** upon user instruction.
+Proceed to review and polish **Section 07: Testimonials** upon user instruction.
