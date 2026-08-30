@@ -714,7 +714,7 @@ p {
 .side-menu.active .side-menu__box[data-delay="4"] { transition-delay: 0.24s; }
 .side-menu.active .side-menu__box[data-delay="5"] { transition-delay: 0.32s; }
 
-/* Box background image with silky grayscale hover & zero sudden zoom */
+/* Box background image with silky grayscale & slow Ken Burns zoom burn on hover */
 .side-menu__box-bg {
   position: absolute;
   inset: 0;
@@ -727,16 +727,18 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: none;
+  transform: scale(1.0);
   filter: grayscale(0%) brightness(0.95);
-  transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.8s ease;
-  will-change: filter;
+  transition: transform 1.0s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, filter;
 }
 
 .side-menu__box:hover .side-menu__box-bg img {
-  transform: none;
+  transform: scale(1.08);
   filter: grayscale(100%) brightness(0.82) contrast(1.05);
+  transition: transform 3.5s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 0.8s ease;
 }
 
 /* Box dark overlay with smooth transitions */

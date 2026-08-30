@@ -34,7 +34,8 @@
 - **Commit `c71192b`:** Tuned exit duration to 0.85s with 0.09s step delays for a slower, cinematic feel.
 - **Commit `a7bd7fb`:** Unified image hover transition curve.
 - **Commit `541926c`:** Added grayscale hover filter.
-- **Section 02 Final Polish:** Removed zoom scaling (`transform: none`) to eliminate sudden image expansion, and applied silky 0.8s grayscale fade on box hover.
+- **Commit `684bd7f`:** Stabilized base image positioning.
+- **Section 02 Polish:** Implemented cinematic Ken Burns slow continuous zoom burn (3.5s slow scale-in drift on hover, 1s smooth return on mouse leave) seamlessly synchronized with the luxury 100% grayscale filter.
 
 ---
 
